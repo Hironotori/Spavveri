@@ -141,8 +141,9 @@ def ukr():
                         pass
                 except:
                         pass
-                try:
 
 
-if conut =='1'
+if conut =='1':
         ukr()
+elif conut == '2':
+        russ()
