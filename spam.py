@@ -89,7 +89,7 @@ def ukr():
                         requests.post("https://mozayka.com.ua/!processing/ajax.php", data={"phone": "+" + number, "mp_m": "sendsmscodereg", "token": "9d064a2beeb932ae5de11f74631269b4"}, headers=headers, proxies=proxies)
                 except:
                         pass
-                try
+                try:
                         requests.post("https://my.xtra.tv/api/signup?lang=uk ", data={"phone": "+" + number}, headers=headers, proxies=proxies)
                         pass
                 except:
