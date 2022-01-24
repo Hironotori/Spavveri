@@ -18,10 +18,9 @@ while True:
      print('Не доставлено')
  try:
      print('Отправлено')
-     response = requests.post('https://megasport.ua/api/auth/phone/?language=ua', headers-headers, data={'phone' : NUMBER})
+     response = requests.post('https://megasport.ua/api/auth/phone/?language=ua', headers=headers, json={'phone' :  NUMBER})
  except:
      print('Не доставлено')
-	 
 	 
 time.sleep(5000)
 
