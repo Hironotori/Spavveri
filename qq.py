@@ -1,7 +1,7 @@
 import requests, fake_useragent, time
 
 user = fake_useragent.UserAgent().random
-headers = {'user_agent' : user})
+headers = {'user_agent' : user}
 NUMBER = input('Beeante HOMep tenedona: (6es +)')
 
  
