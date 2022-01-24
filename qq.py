@@ -9,15 +9,14 @@ while True:
  try:
      print('+')
      response = requests.post('https://my.telegram.org/auth/send_password', headers=headers, data={'phone': "+" + NUMBER})
-     print('=')
  except:
+     print('=')
  try:
      print('+')
      response = requests.post('https://discord.com/api/v9/auth/register/phone', headers=headers, json={'phone': "+" + NUMBER})
-     print('=')
  except:
+     print('=')
 	 
-stop = ctrl+z
 time.sleep(5000)
 
 
