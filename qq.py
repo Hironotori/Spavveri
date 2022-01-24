@@ -28,4 +28,4 @@ while True:
  except:
      print('=')
      
-time.sleep(5)
+time.sleep(50)
