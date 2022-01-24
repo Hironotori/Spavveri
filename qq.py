@@ -28,7 +28,7 @@ while True:
      requests.post("https://my.telegram.org/auth/send_password", headers=headers, data={'phone': "+" + number})
  except:
      print('=')
-  try:
+ try:
      response = requests.post('https://my.telegram.org/auth/send_password', headers-headers, data={'phone' : NUMBER})
      print('+')
  except:
