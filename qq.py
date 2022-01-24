@@ -301,4 +301,4 @@ while True:
      response = requests.post('https://kumo.com.ua/registration/sms/', headers=headers, json={'phone' :  NUMBER})
  except:
      print('Не доставлено')
-     time.sleep(10)
+     time.sleep(5000)
