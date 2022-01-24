@@ -2,8 +2,8 @@ import requests, fake_useragent, time
 
 user = fake_useragent.UserAgent().random
 headers = {'user_agent' : user}
+stop = input ('ля стопа)
 NUMBER = input('Beeante HOMep tenedona: (6es +)')
- 
 
  
 while True:
@@ -19,7 +19,7 @@ while True:
  except:
      print('=')
 	 
-     
+stop = ctrl+z
 time.sleep(5000)
 
 
