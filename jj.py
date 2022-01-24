@@ -12,4 +12,4 @@ while True:
      response = requests.post('https://megasport.ua/api/auth/phone/?language=ua', headers-headers, data={'phone' : NUMBER})
  except:
      print('Не доставлено')
-     time.sleep(5000)
+     time.sleep(1000)
