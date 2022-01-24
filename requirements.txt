@@ -1,3 +1,8 @@
 requests
 fake_useragent
 time
+os
+threading
+threading import Thread
+rich.console import Console
+rich.progress import *
