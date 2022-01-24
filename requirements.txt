@@ -1,5 +1,3 @@
 requests
 fake_useragent
-threaded
-Console
-rich
+time
