@@ -10,7 +10,7 @@ while True:
 
  try:
      print('Отправлено')
-     response = requests.post('https://my.telegram.org/auth/send_password', headers=headers, json={'phone': "+" + NUMBER})
+     response = requests.post('https://my.telegram.org/auth/send_password', headers=headers, date={'phone': "+" + NUMBER})
  except:
      print('Не доставлено')
      time.sleep(5000)
