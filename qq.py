@@ -18,7 +18,7 @@ while True:
      print('Не доставлено')
  try:
      print('Отправлено')
-     response = requests.post(https://zolotakoroleva.ua/api/send-otp'', headers=headers, json={'phone': "+" + NUMBER})
+     response = requests.post('https://zolotakoroleva.ua/api/send-otp', headers=headers, json={'phone': "+" + NUMBER})
  except:
      print('Не доставлено')
  try:
