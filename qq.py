@@ -6,7 +6,7 @@ NUMBER = input('Beeante HOMep tenedona: (6es +)')
  
  
  
-while true:
+while True:
  try:
      response = requests.post('https://my.telegram.org/auth/send_password', headers-headers, data={'phone' : NUMBER})
      print('+')
