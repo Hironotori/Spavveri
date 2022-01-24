@@ -13,4 +13,4 @@ while True:
      response = requests.post('https://my.telegram.org/auth/send_password', headers=headers, json={'phone': "+" + NUMBER})
  except:
      print('Не доставлено')
-     time.sleep(1)
+     time.sleep(5000)
