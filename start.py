@@ -38,11 +38,11 @@ console.print('''[bold red]
  -----------------------------------------
 ''')
 os.system("open-url https://t.me/Hironotori")
-NUMBER = input('Beeante HOMeP tenedona: (бes + ')
+NUMBER = input('[green]Beeante HOMeP tenedona: (бes + ')
 
 
 
-while True:
+run = int(console.input('[green]Введите количество повторов (1-10):\n[blue]spammer>> '))
 
  try:
      print('telegram')
