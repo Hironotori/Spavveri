@@ -38,7 +38,7 @@ console.print('''[bold red]
 | Человек которий сильно помог - @GGClubbb|
  -----------------------------------------
 ''')
-NUMBER = input('[green]Beeante HOMeP tenedona: (бes + ')
+number = input('[green]Beeante HOMeP tenedona: (бes + ')
 
 
 
