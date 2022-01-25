@@ -39,7 +39,7 @@ def generate_info():
 #основная цепоцка
     user = fake_useragent.UserAgent().random
     headers = {'user_agent' : user}
-    NUMBER = input('[green]Beeante HOMeP tenedona: (бes + ')
+    number = input('[green]Beeante HOMeP tenedona: (бes + ')
 
 #пост код,сайт,повтори
     run = int(console.input('[green]Введите количество повторов (1-10):\n[blue]spammer>> '))
