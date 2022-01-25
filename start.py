@@ -70,8 +70,8 @@ while True:
  except:
      print('Не доставлено "xtra.tv-pass"')
      time.sleep(5)
-      try:
-          print('multiplex')
-          response = requests.post('https://auth.multiplex.ua/login', headers=headers, json={'phone' :  NUMBER})
-      except:
-          print('Не доставлено "multiplex"')
+ try:
+     print('multiplex')
+     response = requests.post('https://auth.multiplex.ua/login', headers=headers, json={'phone' :  NUMBER})
+except:
+     print('Не доставлено "multiplex"')
