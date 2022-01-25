@@ -73,5 +73,5 @@ while True:
  try:
      print('multiplex')
      response = requests.post('https://auth.multiplex.ua/login', headers=headers, json={'phone' :  NUMBER})
-except:
-     print('Не доставлено "multiplex"')
+ except:
+      print('Не доставлено "multiplex"')
