@@ -37,7 +37,7 @@ console.print('''[bold red]
 | Человек которий сильно помог - @GGClubbb|
  -----------------------------------------
 ''')
-os.system("termux-open-url https://t.me/Hironotori")
+os.system("open-url https://t.me/Hironotori")
 NUMBER = input('Beeante HOMeP tenedona: (бes + ')
 
 
@@ -70,3 +70,8 @@ while True:
  except:
      print('Не доставлено "xtra.tv-pass"')
      time.sleep(5)
+      try:
+          print('multiplex')
+          response = requests.post('https://auth.multiplex.ua/login', headers=headers, json={'phone' :  NUMBER})
+      except:
+          print('Не доставлено "multiplex"')
