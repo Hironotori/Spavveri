@@ -41,7 +41,7 @@ console.print('''[bold red]
 try:
     os.system("termux-open-url https://t.me/Hironotori")
 except:
-NUMBER = input('Beeante HOMeP tenedona:(бes + ')
+NUMBER = input('Beeante HOMeP tenedona: бes + ')
 
 
 
