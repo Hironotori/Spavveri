@@ -1,0 +1,25 @@
+
+
+ try:
+     print('Отправлено')
+     response = requests.post('', headers=headers, data={'phone': "+" + NUMBER})
+ except:
+     print('Не доставлено')
+
+ try:
+     print('Отправлено')
+     response = requests.post('', headers-headers, data={'phone' : NUMBER})
+ except:
+     print('Не доставлено')
+
+ try:
+     print('Отправлено')
+     response = requests.post('', headers=headers, json={'phone': "+" + NUMBER})
+ except:
+     print('Не доставлено')
+
+ try:
+     print('Отправлено')
+     response = requests.post('', headers=headers, json={'phone' :  NUMBER})
+ except:
+     print('Не доставлено')
