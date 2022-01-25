@@ -18,23 +18,33 @@ can easily put the phone!
 # Install Kali linux
 
 sudo apt install python3
+
 sudo apt install python3-pip
+
 sudo apt install git
 
 cd
+
 git clone https://github.com/Hironotori/Spavveri
+
 cd Spavveri
+
 python3 Spavveri.py
 
 # Install Termux
 
 apt install python
+
 apt install python-pip
+
 apt install git
 
 cd
+
 git clone https://github.com/Hironotori/Spavveri
+
 cd Spavveri
+
 python3 Spavveri.py
 
 Relax! 
