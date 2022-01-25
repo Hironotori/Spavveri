@@ -28,7 +28,9 @@ def generate_info():
         username = _name + random.choice(list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
     _email = _name + '@gmail.com'
     email = _email
-#Картинка
+
+    user = fake_useragent.UserAgent().random
+    headers = {'user_agent' : user}
     console.print('''[bold red]
      -----------------------------------------
     | Создатель - Hironotori                  |
@@ -36,12 +38,7 @@ def generate_info():
     | Человек которий сильно помог - @GGClubbb|
      -----------------------------------------
     ''')
-#основная цепоцка
-    user = fake_useragent.UserAgent().random
-    headers = {'user_agent' : user}
     number = input('[green]Beeante HOMeP tenedona: (бes + ')
-
-#пост код,сайт,повтори
     run = int(console.input('[green]Введите количество повторов (1-10):\n[blue]spammer>> '))
     for _ in track(range(run)):
         try:
