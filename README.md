@@ -9,6 +9,10 @@ can easily put the phone!
 
 <b>Valid only for Ukraine numbers!</b>
 
+#ОБНОВЛЕНИЕ
+
+На данный момент мало сайтов(10) для смс бомбера 
+
 # Install Kali linux
 
 sudo apt install python3
