@@ -169,7 +169,7 @@ def ukr():
 def russ():
         for _ in track(range(run)):
                 headers = {"User-Agent": fake_useragent.UserAgent().random}
-print(еще не работает)
+print('еще не работает')
 if conut =='1':
         ukr()
 elif conut == '2':
