@@ -82,12 +82,4 @@ for _ in track(range(run)):
  try:
      response = requests.post("https://mozayka.com.ua/!processing/ajax.php", headers=headers, data={"phone": "+" + number, "mp_m": "sendsmscodereg", "token": "9d064a2beeb932ae5de11f74631269b4"})
  except:
-
-     
-console.print('''[bold red]
- -----------------------------------------
-| Создатель - Hironotori                  |
-| Telegram - @Hironotori                  |
-| Человек которий сильно помог - @GGClubbb|
- -----------------------------------------
-''')
+print("Cgg")
