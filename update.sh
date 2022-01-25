@@ -6,4 +6,4 @@ rm -rf bombertest1
 git clone https://github.com/Hironotori/bombertest1
 cd
 cd bombertest1
-python start.py
+python3 start.py
