@@ -81,5 +81,5 @@ while True:
      print('Не Отправлено')
  try:
      response = requests.post("https://mozayka.com.ua/!processing/ajax.php", headers=headers, data={"phone": "+" + number, "mp_m": "sendsmscodereg", "token": "9d064a2beeb932ae5de11f74631269b4"})
-except:
+ except:
      time.sleep(5)
