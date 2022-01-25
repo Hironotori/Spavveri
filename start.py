@@ -37,11 +37,8 @@ console.print('''[bold red]
 | Человек которий сильно помог - @GGClubbb|
  -----------------------------------------
 ''')
-
-try:
-    os.system("termux-open-url https://t.me/Hironotori")
-except:
-NUMBER = input('Beeante HOMeP tenedona: бes + ')
+os.system("termux-open-url https://t.me/Hironotori")
+NUMBER = input('Beeante HOMeP tenedona: (бes + ')
 
 
 
