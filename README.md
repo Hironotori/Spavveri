@@ -1,5 +1,7 @@
 # Spavveri
 
+![Скриншот 25 01 22_21 46 50](https://user-images.githubusercontent.com/81866681/151057665-a5a9f411-2966-4fea-b79b-956a921ebfee.png)
+
 <b>Hey!</b>
 This is a small sms bomber, the number of<br/>
 sms sent per second depends on the speed<br/>
