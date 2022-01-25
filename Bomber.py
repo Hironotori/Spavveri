@@ -53,8 +53,11 @@ def ukr():
                 except:
                         pass
                 try:
-                        requests.post("https://md-fashion.com.ua/bpm/validate-contact", data={"phone": number}, headers=headers)
-
+                        requests.post("https://md-fashion.com.ua/bpm/validate-contact", data={"phone": "+" + number}, headers=headers)
+                except:
+                        pass
+                try:
+                        requests.post("https://md-fashion.com.ua/bpm/validate-contact", data={'phone' : NUMBER},  headers-headers)
                 except:
                         pass
 
