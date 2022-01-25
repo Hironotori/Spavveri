@@ -52,7 +52,12 @@ def ukr():
                         requests.post("https://my.telegram.org/auth/send_password", data={"phone": "+" + number}, headers=headers)
                 except:
                         pass
-                requests.post("https://md-fashion.com.ua/bpm/validate-contact", data={"phone": number}, headers=headers)
+                try:
+                        requests.post("https://md-fashion.com.ua/bpm/validate-contact", data={"phone": number}, headers=headers)
+
+                except:
+                        pass
+
 
 
 
