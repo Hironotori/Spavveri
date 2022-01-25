@@ -30,6 +30,18 @@ def generate_info():
 
 user = fake_useragent.UserAgent().random
 headers = {'user_agent' : user}
+console.print('''[bold green]
+  ___   _ __     __ _   _ __ ___
+ / __| | '_ \   / _` | | '_ ` _ \
+ \__ \ | |_) | | (_| | | | | | | |
+ |___/ | .__/   \__,_| |_| |_| |_|
+       |_|
+''')
+console.print('''[bold red]
+ -----------------------------------------
+| Telegram - @Hironotori                  |
+ -----------------------------------------
+''')
 NUMBER = input('Beeante HOMep tenedona: (6es +)')
 
 
