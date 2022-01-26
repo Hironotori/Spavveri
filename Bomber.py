@@ -38,11 +38,11 @@ console.print('''[bold red]
 | Человек которий сильно помог - @GGClubbb|
  -----------------------------------------
 ''')
-number = input('[green]Beeante HOMeP tenedona: (бes + ')
+self.formatted_phone = input('[green]Beeante HOMeP tenedona: (бes + ')
 
 
 
-run = int(console.input('[green]Введите количество повторов (1-10):\n[blue]spammer>> '))
+run = int(console.input('[green]Введите количество повторов (1-25):\n[blue]spammer>> '))
 for _ in track(range(run)):
  try:
      print('мазайкааа')
