@@ -46,6 +46,6 @@ run = int(console.input('[green]Введите количество повтор
 for _ in track(range(run)):
  try:
      print('vodafone')
-     requests.post("https://oll.tv/api/v3/auth/login?lang=rus", json={"number": number}, headers=headers)
+     requests.post("https://oll.tv/api/v3/auth/login?lang=rus", date={"number": number}, headers=headers)
  except:
      print('Не отправлено (vodafone)')
