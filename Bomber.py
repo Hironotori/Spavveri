@@ -1,5 +1,4 @@
 import Service
-from service
 
 number = input('[green]Beeante HOMeP tenedona: (бes + ')
 
