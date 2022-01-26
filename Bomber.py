@@ -49,8 +49,8 @@ for _ in track(range(run)):
      response = requests.post('https://www.rabota.ru/remind', headers=headers, data={'phone': "+" + NUMBER})
  except:
      print('11')
-  try:
-      print('1')
-      response = requests.post('https://www.rabota.ru/api-web/v6/code/send.json', headers=headers, data={'phone': "+" + NUMBER})
-  except:
-      print('11')
+ try:
+     print('2')
+     response = requests.post('https://www.rabota.ru/api-web/v6/code/send.json', headers=headers, data={'phone': "+" + NUMBER})
+ except:
+     print('22')
