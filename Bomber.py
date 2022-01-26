@@ -46,11 +46,11 @@ run = int(console.input('[green]Введите количество повтор
 for _ in track(range(run)):
  try:
      print('1')
-     response = requests.post('https://www.rabota.ru/remind', headers=headers, data={'phone': "+" + NUMBER})
+     response = requests.post('https://www.rabota.ru/remind', headers=headers, json={'phone': "+" + NUMBER})
  except:
      print('11')
  try:
      print('2')
-     response = requests.post('https://www.rabota.ru/api-web/v6/code/send.json', headers=headers, data={'phone': "+" + NUMBER})
+     response = requests.post('https://www.rabota.ru/api-web/v6/code/send.json', headers=headers, json={'phone': "+" + NUMBER})
  except:
      print('22')
