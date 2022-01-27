@@ -39,11 +39,11 @@ run = int(console.input('[green]Введите количество повтор
 for _ in track(range(run)):
  try:
      print('Отправлено')
-     response = requests.post('https://my.ctrs.com.ua/api/auth/login', headers=headers, date={'phone' :  NUMBER})
+     response = requests.post('https://my.ctrs.com.ua/api/auth/login', headers=headers, data={'phone' :  NUMBER})
  except:
      print('Не доставлено')
  try:
      print('Отправлено')
-     response = requests.post('https://my.ctrs.com.ua/api/auth/login', headers=headers, date={'phone': "+" + NUMBER})
+     response = requests.post('https://my.ctrs.com.ua/api/auth/login', headers=headers, data={'phone': "+" + NUMBER})
  except:
      print('Не доставлено')
