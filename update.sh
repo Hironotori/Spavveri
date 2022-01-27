@@ -1,9 +1,9 @@
 cd
 rm -rf bombertest1
-git clone https://github.com/Hironotori/Spavveri
+git clone https://github.com/Hironotori/bombertest1
 cd
 rm -rf bombertest1
-git clone https://github.com/Hironotori/Spavveri
+git clone https://github.com/Hironotori/bombertest1
 cd
-cd Spavveri
-python3 Spavveri.py
+cd bombertest1
+python3 Start.sh

@@ -1,9 +1,5 @@
 #Библиотеки
-import requests
-import fake_useragent
-import time
-import os
-import threading
+import requests,fake_useragent,time,os,threading
 from threading import Thread
 from rich.console import Console
 from rich.progress import *
@@ -31,14 +27,14 @@ def generate_info():
 
 user = fake_useragent.UserAgent().random
 headers = {'user_agent' : user}
-console.print('''[bold red]
+console.print('''[bold greean]
  -----------------------------------------
 | Создатель - Hironotori                  |
 | Telegram - @Hironotori                  |
 | Человек которий сильно помог - @GGClubbb|
  -----------------------------------------
 ''')
-number = input('Beeante HOMeP tenedona: (бes + ')
+number = input('[bold red] Beeante HOMeP tenedona: (бes + ')
 
 
 
