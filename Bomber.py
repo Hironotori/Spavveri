@@ -31,13 +31,6 @@ def generate_info():
 
 user = fake_useragent.UserAgent().random
 headers = {'user_agent' : user}
-console.print('''[bold red]
- -----------------------------------------
-| Создатель - Hironotori                  |
-| Telegram - @Hironotori                  |
-| Человек которий сильно помог - @GGClubbb|
- -----------------------------------------
-''')
 NUMBER = input('[green]Beeante HOMeP tenedona: (бes + ')
 
 
@@ -46,11 +39,11 @@ run = int(console.input('[green]Введите количество повтор
 for _ in track(range(run)):
  try:
      print('Отправлено')
-     response = requests.post('https://my.ctrs.com.ua/api/auth/login', headers=headers, json={'phone' :  NUMBER})
+     response = requests.post('https://my.ctrs.com.ua/api/auth/login', headers=headers, date={'phone' :  NUMBER})
  except:
      print('Не доставлено')
  try:
      print('Отправлено')
-     response = requests.post('https://my.ctrs.com.ua/api/auth/login', headers=headers, json={'phone': "+" + NUMBER})
+     response = requests.post('https://my.ctrs.com.ua/api/auth/login', headers=headers, date={'phone': "+" + NUMBER})
  except:
      print('Не доставлено')
