@@ -40,10 +40,10 @@ for _ in track(range(run)):
                     try:
                         requests.post("https://money4you.ua/api/clientRegistration/sendValidationSms", data={"fathersName": "Витальевич", "firstName": "Виталий", "lastName": "Соколов", "phone": "+" + number, "udriveEmployee": "false"}, headers=headers, proxies=proxies)
                         print("отправлена")
-                 except:
+                    except:
                         print( YT отправлена")
                     try:
                         requests.post("https://auth.multiplex.ua/login", data={"login": "+" + number}, headers=headers)
                         print('multiplex')
-                 except:
+                    except:
                         print('Не доставлено (multiplex)')
