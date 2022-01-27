@@ -83,7 +83,7 @@ def ukr():
                         requests.post("https://www.liqpay.ua/apiweb/login/start", data={"phone": number, "token": "lp_91d8dedf4a311ad78604ec6b4e572ded001502bb"}, headers=headers, proxies=proxies)#https://www.liqpay.ua/ru/authorization
                 except:
                         pass
-try:
+                try:
                         requests.post("https://u.icq.net/api/v70/rapi/auth/sendCoden", params={"phone": number, "devId": "ic1rtwz1s1Hj1O0r"}, headers=headers, proxies=proxies)#https://web.icq.com/
                 except:
                         pass
