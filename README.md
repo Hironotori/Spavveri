@@ -13,29 +13,24 @@ can easily put the phone!
 
 # UPDATE
 
-На данный момент мало сайтов(10) для смс бомбера 
+<br/>To update write<br/>
+<b>bash update.sh<b>
 
 # Install Kali linux
 
-sudo apt install python3
-
-sudo apt install python3-pip
-
-sudo apt install git
-
-cd
-
-git clone https://github.com/Hironotori/Spavveri
-
-cd Spavveri
-
+<br/>sudo apt install python3<br/>
+<br/>sudo apt install python3-pip<br/>
+<br/>sudo apt install git<br/>
+<br/>cd<br/>
+<br/>git clone https://github.com/Hironotori/Spavveri<br/>
+<br/>cd Spavveri<br/>
 python3 Spavveri.py
 
 # Install Termux
 
 УСТАНАВЛИВАТЬ ПРОЛОЖЕНИЯ ТЕРМУКС ЖДЕСЬ:https://f-droid.org/repo/com.termux_117.apk
 
-apt update    (ОДИН РАЗ)
+<b>apt update<b>    (ОДИН РАЗ)
 
 apt upgrade   (ОДИН РАЗ)
 
