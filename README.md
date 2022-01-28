@@ -33,18 +33,22 @@ python3 Spavveri.py
 
 # Install Termux
 
-apt install python
+apt update    (ОДИН РАЗ)
 
-apt install python-pip
+apt upgrade   (ОДИН РАЗ)
 
-apt install git
+apt install python   (ОДИН РАЗ)
 
-cd
+apt install python2  (ОДИН РАЗ)
 
-git clone https://github.com/Hironotori/Spavveri
+apt install git      (ОДИН РАЗ)
 
-cd Spavveri
+cd                   (КАЖДИЙ РАЗ)
 
-python3 Spavveri.py
+git clone https://github.com/Hironotori/Spavveri     (ОДИН РАЗ)
 
-Relax! 
+cd Spavveri                         (КАЖДИЙ РАЗ)
+
+pip install -r requirements.txt     (ОДИН РАЗ)
+
+python3 Spavveri.py                 (КАЖДИЙ РАЗ)
