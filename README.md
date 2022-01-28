@@ -33,6 +33,8 @@ python3 Spavveri.py
 
 # Install Termux
 
+УСТАНАВЛИВАТЬ ПРОЛОЖЕНИЯ ТЕРМУКС ЖДЕСЬ:https://f-droid.org/repo/com.termux_117.apk
+
 apt update    (ОДИН РАЗ)
 
 apt upgrade   (ОДИН РАЗ)
