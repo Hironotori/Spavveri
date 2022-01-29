@@ -55,8 +55,9 @@ for _ in track(range(run)):
          print('Не отправлено (bi.ua)')
  try:
          requests.post("https://my.ctrs.com.ua/api/auth/login", data={"provider": "phone", "identity": number}, headers=headers, proxies=proxies)
+         print('ctrs')
  except:
-         print('Не отправлено my.ctrs.com')
+         print('Не отправлено ('ctrs')
  try:
          requests.post("https://my.telegram.org/auth/send_password", data={"phone": "+" + number}, headers=headers, proxies=proxies)
          print('telegram')
