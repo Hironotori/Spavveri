@@ -11,6 +11,10 @@ can easily put the phone!
 
 <b>Valid only for Ukraine numbers!</b>
 
+# NEWS
+
+</b>https://t.me/Bomberukr</b>
+
 # UPDATE
 
 <br/>To update write<br/>
