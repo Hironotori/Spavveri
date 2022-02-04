@@ -122,7 +122,7 @@ for _ in track(range(run)):
                  "personal_data_agreement": "on",
                  "formType": "simple",
                  "utc_offset": "120",
-             },
+             }
          , headers=headers)
              print('[@'+str(bot_username)+'] [+] Apteka отправлено!')
              time.sleep(0.1)
