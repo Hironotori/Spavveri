@@ -101,7 +101,7 @@ for _ in track(range(run)):
                  "mode": "sendSms",
                  "syf_prog": "clients-services",
                  "getSysParam": "yes",
-             },
+             }
          , headers=headers)
              print('[@'+str(bot_username)+'] [+] ETM отправлено!')
              time.sleep(0.1)
